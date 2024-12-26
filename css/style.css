@@ -6,9 +6,153 @@
     --beige: #F8F2EF;
 
 }
+*{
+    box-sizing: border-box;
+}
+
 /* ---------------MENÚ------------------ */
 /* ---------------HOME PAGE------------------ */
 /* ---------------ABOUT US------------------ */
 /* ---------------CONTACTO------------------ */
+.contacto {
+    background-color: var(--beige);
+}
+body {
+    background-color: var(--beige);
+}
+
+/* Estilo del Header */
+header {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#header-contacto {
+    background-color: var(--beige);
+    color: var(--orange);
+}
+
+.contact-title {
+    font-size: 48px;
+    font-family: 'Paytone One', sans-serif;
+}
+
+/* Estilos del formulario */
+form input, form textarea {
+    border: 2px solid var(--orange); /* Borde naranja */
+    background-color: var(--beige); /* Fondo igual que el fondo general */
+    color: var(--black);
+    font-weight: bold;
+}
+
+form button {
+    background-color: var(--blue); /* Botón azul */
+    color: var(--white); /* Texto blanco */
+    font-weight: bold;
+    border: none;
+}
+
+form button:hover {
+    background-color: darkblue;
+}
+
+/* Estilo para la newsletter */
+.newsletter-box {
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.newsletter-box input {
+    border: 2px solid var(--orange);
+    background-color: var(--beige);
+    color: var(--black);
+}
+
+.newsletter-box button {
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    font-weight: bold;
+}
+
+.newsletter-box button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+/* Alineación y distribución */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-md-6 {
+    width: 48%; /* Asegura que ambas columnas ocupen el 48% */
+}
+
+/* Estilo del grid de fondo */
+.container {
+    background-image: linear-gradient(to right, rgba(255, 58, 14, 0.2) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 58, 14, 0.2) 1px, transparent 1px);
+    background-size: 50px 50px; /* Ajusta el tamaño del grid */
+}
+
+
+#contact-info {
+    background-color: var(--orange);
+    color: var(--black);
+}
+
+#contact-info i {
+    font-size: 24px;
+    color: var(--orange);
+}
+
+#contact-info p {
+    font-size: 14px;
+}
+
+#contact-info button {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajusta el tamaño aquí */
+    max-width: 600px; /* Tamaño máximo opcional */
+    margin: 0 auto; /* Centrar el mapa si es necesario */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue, 0.5); /* Azul con opacidad 50% */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.map-container:hover .map-overlay {
+    background-color: transparent; /* Al hacer hover, el overlay desaparece */
+}
+
+
+  
 /* ---------------ABOUT US------------------ */
 /* ---------------FOOTER------------------ */
