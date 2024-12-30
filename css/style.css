@@ -109,3 +109,15 @@ form button {
         margin-bottom: 20px; /* Separación entre las cajas en pantallas pequeñas */
     }
 }
+#personalized-card {
+    background-color: var(--beige);
+    border-top: 2px solid var(--orange);
+    padding: 40px 20px;
+}
+#card-content {
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    text-align: center;
+    border-radius: 8px;
+}
+    
