@@ -5,42 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Umami</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   
 </head>
 <body class="contacto">
     <header class="container text-center py-3">
         <h1>HEADER-MENÚ</h1>
     </header>
 
-    <section id="header-contacto" class="container-fluid text-center py-5" style="background-image: url('../UMAMI/media/img/headercontacto.png'); background-size: cover;">
+    <section id="header-contacto" class="container-fluid text-center py-5">
         <h1 class="contact-title">Contacto</h1>
         <p>Desde Umami te proporcionamos una atención personalizada. Si te surge cualquier tipo de duda no dudes en contactarnos.</p>
     </section>
 
-    <div class="container my-5">
+    <div class="container">
         <div class="row">
+            <!-- Columna del formulario -->
             <div class="col-md-6">
                 <form>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Email">
+                    <div class="row mb-3" >
+                        <div class="col-md-6">
+                            <input type="email" class="form-control" placeholder="Email" style="border: var(--orange) solid;">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control" placeholder="Tlf."style="border: var(--orange) solid;">
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <input type="tel" class="form-control" placeholder="Tlf.">
+                        <input type="text" class="form-control" placeholder="Nombre" style="border: var(--orange) solid;">
                     </div>
                     <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre">
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" placeholder="Mensaje" rows="4"></textarea>
+                        <textarea class="form-control" placeholder="Mensaje" rows="4"style="border: var(--orange) solid;"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
             </div>
-            <div class="col-md-6">
+    
+            <!-- Columna del newsletter -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
                 <div class="newsletter-box">
                     <h4>NEWSLETTER</h4>
                     <p>Suscríbete a nuestro Newsletter para estar al tanto de los cambios en el menú y nuestras ofertas.</p>
@@ -51,32 +60,37 @@
         </div>
     </div>
 
-    
+    <!-- Información de contacto -->
     <section id="contact-info" class="container text-center py-5">
         <div class="row">
             <div class="col-md-4">
-                <i class="fa fa-phone"></i>
-                <p>+34 672 65 23 09<br>Tu mesa está a una llamada de distancia</p>
+                <div class="contact-box">
+                    <i class="fa fa-phone fa-2x mb-3"></i>
+                    <p class="contact-text">+34 672 65 23 09<br>Tu mesa está a una llamada de distancia</p>
+                </div>
             </div>
             <div class="col-md-4">
-                <i class="fa fa-envelope"></i>
-                <p>umami@umami.com<br>¡Envíanos un correo, estamos atentos!</p>
+                <div class="contact-box">
+                    <i class="fa fa-envelope fa-2x mb-3"></i>
+                    <p class="contact-text">umami@umami.com<br>¡Envíanos un correo, estamos atentos!</p>
+                </div>
             </div>
             <div class="col-md-4">
-                <i class="fa fa-map-marker"></i>
-                <p>Av. de Alfonso XIII, 97, Chamartín, Madrid<br>¡Estamos en el metro de Umami!</p>
+                <div class="contact-box">
+                    <i class="fa fa-map-marker fa-2x mb-3"></i>
+                    <p class="contact-text">Av. de Alfonso XIII, 97, Chamartín, Madrid<br>¡Estamos en el metro de Umami!</p>
+                </div>
             </div>
         </div>
-        </section>
-        
-        <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.104768036676!2d-3.6746112843987997!3d40.45978205965186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228d7c4f4b2ef%3A0x47d0b228db327239!2sAv.%20de%20Alfonso%20XIII%2C%2097%2C%2028036%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sus!4v1609364344812!5m2!1ses!2sus"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            <div class="map-overlay"></div>
-        </div>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
+
+    <!-- Mapa -->
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.104768036676!2d-3.6746112843987997!3d40.45978205965186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228d7c4f4b2ef%3A0x47d0b228db327239!2sAv.%20de%20Alfonso%20XIII%2C%2097%2C%2028036%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sus!4v1609364344812!5m2!1ses!2sus"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>

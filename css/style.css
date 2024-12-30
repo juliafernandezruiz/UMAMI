@@ -1,158 +1,111 @@
-:root{
+:root {
     --black: #000000;
     --white: #ffffff;
     --blue: #1E0FDA;
     --orange: #FF3A0E;
     --beige: #F8F2EF;
-
 }
-*{
+
+* {
     box-sizing: border-box;
 }
 
-/* ---------------MENÚ------------------ */
-/* ---------------HOME PAGE------------------ */
-/* ---------------ABOUT US------------------ */
-/* ---------------CONTACTO------------------ */
-.contacto {
-    background-color: var(--beige);
-}
-body {
+.contacto{
     background-color: var(--beige);
 }
 
-/* Estilo del Header */
-header {
-    background-color: var(--white);
-    color: var(--black);
-}
-
+/* Header Contacto */
 #header-contacto {
     background-color: var(--beige);
-    color: var(--orange);
+    background-image: url('../media/img/headercontacto.png');
+}
+.container {
+    padding-top: 5%;
 }
 
 .contact-title {
-    font-size: 48px;
     font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
 }
 
-/* Estilos del formulario */
+/* Formulario */
+form {
+    background-color: var(--beige); /* Fondo beige */
+    padding: 20px;
+    border: 1px solid var(--orange);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
 form input, form textarea {
-    border: 2px solid var(--orange); /* Borde naranja */
-    background-color: var(--beige); /* Fondo igual que el fondo general */
-    color: var(--black);
-    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--orange);
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+}
+
+form .row .col-md-6 {
+    padding-right: 10px; /* Espaciado entre los campos de email y teléfono */
 }
 
 form button {
-    background-color: var(--blue); /* Botón azul */
-    color: var(--white); /* Texto blanco */
-    font-weight: bold;
-    border: none;
+   background-color: var(--blue)!important;
 }
-
-form button:hover {
-    background-color: darkblue;
-}
-
-/* Estilo para la newsletter */
 .newsletter-box {
     background-color: var(--orange);
     color: var(--white);
-    border-radius: 5px;
     padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
-
 .newsletter-box input {
-    border: 2px solid var(--orange);
-    background-color: var(--beige);
-    color: var(--black);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    border-radius: 4px; /* Bordes redondeados */
 }
 
 .newsletter-box button {
     background-color: var(--white);
     color: var(--orange);
-    border: 2px solid var(--orange);
+    border: 2px solid var(--white);
+    padding: 10px 20px;
     font-weight: bold;
+    text-align: center;
+    display: inline-block;
 }
 
-.newsletter-box button:hover {
+.contact-box {
     background-color: var(--orange);
     color: var(--white);
-}
-
-/* Alineación y distribución */
-.container {
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Para que todas las cajas tengan el mismo tamaño */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.row {
-    display: flex;
-    justify-content: space-between;
+.contact-box i {
+    color: var(--white);
+    margin-bottom: 10px;
 }
 
-.col-md-6 {
-    width: 48%; /* Asegura que ambas columnas ocupen el 48% */
+.contact-box .contact-text {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.5;
 }
 
-/* Estilo del grid de fondo */
-.container {
-    background-image: linear-gradient(to right, rgba(255, 58, 14, 0.2) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(255, 58, 14, 0.2) 1px, transparent 1px);
-    background-size: 50px 50px; /* Ajusta el tamaño del grid */
+@media (max-width: 767px) {
+    .contact-box {
+        margin-bottom: 20px; /* Separación entre las cajas en pantallas pequeñas */
+    }
 }
-
-
-#contact-info {
-    background-color: var(--orange);
-    color: var(--black);
-}
-
-#contact-info i {
-    font-size: 24px;
-    color: var(--orange);
-}
-
-#contact-info p {
-    font-size: 14px;
-}
-
-#contact-info button {
-    background-color: var(--blue);
-    border-color: var(--blue);
-}
-
-.map-container {
-    position: relative;
-    width: 100%;
-    height: 300px; /* Ajusta el tamaño aquí */
-    max-width: 600px; /* Tamaño máximo opcional */
-    margin: 0 auto; /* Centrar el mapa si es necesario */
-}
-
-.map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.map-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--blue, 0.5); /* Azul con opacidad 50% */
-    transition: background-color 0.3s ease; /* Transición suave */
-}
-
-.map-container:hover .map-overlay {
-    background-color: transparent; /* Al hacer hover, el overlay desaparece */
-}
-
-
-  
-/* ---------------ABOUT US------------------ */
-/* ---------------FOOTER------------------ */
