@@ -1,14 +1,123 @@
-:root{
+:root {
     --black: #000000;
     --white: #ffffff;
     --blue: #1E0FDA;
     --orange: #FF3A0E;
     --beige: #F8F2EF;
-
 }
-/* ---------------MENÚ------------------ */
-/* ---------------HOME PAGE------------------ */
-/* ---------------ABOUT US------------------ */
-/* ---------------CONTACTO------------------ */
-/* ---------------ABOUT US------------------ */
-/* ---------------FOOTER------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+.contacto{
+    background-color: var(--beige);
+}
+
+/* Header Contacto */
+#header-contacto {
+    background-color: var(--beige);
+    background-image: url('../media/img/headercontacto.png');
+}
+.container {
+    padding-top: 5%;
+}
+
+.contact-title {
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+}
+
+/* Formulario */
+form {
+    background-color: var(--beige); /* Fondo beige */
+    padding: 20px;
+    border: 1px solid var(--orange);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--orange);
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+}
+
+form .row .col-md-6 {
+    padding-right: 10px; /* Espaciado entre los campos de email y teléfono */
+}
+
+form button {
+   background-color: var(--blue)!important;
+}
+.newsletter-box {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+.newsletter-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--white);
+    background-color: var(--white);
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.newsletter-box button {
+    background-color: var(--white);
+    color: var(--orange);
+    border: 2px solid var(--white);
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.contact-box {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Para que todas las cajas tengan el mismo tamaño */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box i {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.contact-box .contact-text {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+    .contact-box {
+        margin-bottom: 20px; /* Separación entre las cajas en pantallas pequeñas */
+    }
+}
+#personalized-card {
+    background-color: var(--beige);
+    border-top: 2px solid var(--orange);
+    padding: 40px 20px;
+}
+#card-content {
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    text-align: center;
+    border-radius: 8px;
+}
+    
