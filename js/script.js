@@ -4,57 +4,82 @@ $(document).ready(function () {
     const foodSuggestions = ["Ramen", "Sushi", "Okonomiyaki", "Takoyaki", "Sashimi", "Tempura"];
 
     $('#generate-card').on('click', function () {
-        const userName = $('#user-name').val();
-        const birthdate = $('#user-birthdate').val();
-        
+        const userName = $.trim($('#user-name').val());
+        const birthdate = $.trim($('#user-birthdate').val());
+
         if (!userName || !birthdate) {
             alert('Por favor, completa ambos campos.');
             return;
         }
 
-        // Convertir nombre a Hiragana (simple transliteración)
         const japaneseName = convertToHiragana(userName);
-        
-        // Selección de platillo
+
         const foodIndex = new Date(birthdate).getDate() % foodSuggestions.length;
         const foodSuggestion = foodSuggestions[foodIndex];
 
-        // Contenido de la tarjeta
         const cardHtml = `
             <p><strong>Nombre en japonés (Hiragana):</strong> ${japaneseName}</p>
             <p><strong>Recomendación del chef:</strong> ${foodSuggestion}</p>
-            <img src="https://source.unsplash.com/200x200/?${foodSuggestion}" alt="${foodSuggestion}" style="border-radius: 8px; margin-top: 10px;">
         `;
+
         $('#card-content').html(cardHtml);
+
+        // Crear modal dinámicamente si no existe
+        if ($('#card-result').length === 0) {
+            const modalHtml = `
+                <div class="modal fade" id="card-result" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="cardModalLabel">Tu tarjeta personalizada</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body" id="card-content">
+                                <!-- Contenido generado dinámicamente -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            $('body').append(modalHtml);
+        }
 
         // Mostrar el modal
         $('#card-result').modal('show');
     });
 
-    // Función para convertir el nombre a Hiragana
     function convertToHiragana(name) {
         const hiraganaMap = {
             'a': 'あ', 'i': 'い', 'u': 'う', 'e': 'え', 'o': 'お',
-            'ka': 'か', 'ki': 'き', 'ku': 'く', 'ke': 'け', 'ko': 'こ',
-            'sa': 'さ', 'shi': 'し', 'su': 'す', 'se': 'せ', 'so': 'そ',
-            'ta': 'た', 'chi': 'ち', 'tsu': 'つ', 'te': 'て', 'to': 'と',
-            'na': 'な', 'ni': 'に', 'nu': 'ぬ', 'ne': 'ね', 'no': 'の',
-            'ha': 'は', 'hi': 'ひ', 'fu': 'ふ', 'he': 'へ', 'ho': 'ほ',
-            'ma': 'ま', 'mi': 'み', 'mu': 'む', 'me': 'め', 'mo': 'も',
-            'ya': 'や', 'yu': 'ゆ', 'yo': 'よ',
-            'ra': 'ら', 'ri': 'り', 'ru': 'る', 're': 'れ', 'ro': 'ろ',
-            'wa': 'わ', 'wo': 'を', 'n': 'ん'
+            'k': 'か', 's': 'さ', 't': 'た', 'n': 'な', 'h': 'は',
+            'm': 'ま', 'y': 'や', 'r': 'ら', 'w': 'わ', 'g': 'が',
+            'z': 'ざ', 'd': 'だ', 'b': 'ば', 'p': 'ぱ', 'f': 'ふ',
+            'ch': 'ち', 'ts': 'つ', 'sh': 'し', 'j': 'じ'
         };
 
+        const vowels = ['a', 'i', 'u', 'e', 'o'];
         let hiraganaName = '';
-        name.split('').forEach(char => {
-            let lowerChar = char.toLowerCase();
-            if (hiraganaMap[lowerChar]) {
-                hiraganaName += hiraganaMap[lowerChar];
+        let i = 0;
+
+        while (i < name.length) {
+            const char = name[i].toLowerCase();
+            const nextChar = name[i + 1] ? name[i + 1].toLowerCase() : '';
+
+            const compound = char + nextChar;
+            if (hiraganaMap[compound]) {
+                hiraganaName += hiraganaMap[compound];
+                i += 2;
+            } else if (hiraganaMap[char]) {
+                hiraganaName += hiraganaMap[char];
+                i++;
+            } else if (vowels.includes(char)) {
+                hiraganaName += char;
+                i++;
             } else {
-                hiraganaName += char; // Para cualquier carácter no mapeado
+                hiraganaName += char;
+                i++;
             }
-        });
+        }
 
         return hiraganaName;
     }
