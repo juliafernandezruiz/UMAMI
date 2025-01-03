@@ -1,0 +1,79 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #1E0FDA;
+    --orange: #FF3A0E;
+    --beige: #F8F2EF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.nosotros{
+    background-color: var(--beige);
+}
+
+/* HEADER */
+#header-nosotros {
+    background-color: var(--beige);
+    background-image: url('../media/img/headercontacto.png');
+}
+.container {
+    padding-top: 5%;
+}
+
+.nosotros-title {
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    font-size: 3.4em;
+}
+
+.nosotros-subtitle{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: var(--orange);
+    font-size: 1em;
+}
+
+.custom-line {
+    height: 1.5px;
+    background-color: var(--orange);
+    width: 100%;
+}
+
+
+/* NUESTRA HISTORIA */
+#nuestra-historia{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto-historia {
+    flex: 0.8;
+    margin: 0 9em 0 5em;
+}
+
+.historia-titulo{
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    font-size: 2.3em;
+    margin-bottom: 1em;
+}
+
+.historia-texto{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--orange);
+    font-size: 1em;
+}
+
+.foto-historia {
+    flex: 0.7;
+}
+
+.foto-historia img {
+    width: 100%;
+    height: auto;
+}
