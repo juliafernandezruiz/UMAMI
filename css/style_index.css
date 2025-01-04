@@ -42,3 +42,35 @@ header {
     font-family: 'Inter', sans-serif;
     font-weight: 700; /* Bold */
 }
+
+/* MENÚ */
+
+.navbar {
+    background-color: #F8F2EF; /* Fondo del menú */
+    border-bottom: 1px solid #ff3a0e; /* Línea roja debajo */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em; /* Espacio uniforme entre enlaces */
+    padding-left: 17em;
+}
+
+.nav-link {
+    font-size: 1em;
+    font-weight: 400; /* Regular por defecto */
+    color: #ff3a0e; /* Color de los enlaces */
+    text-transform: uppercase;
+    transition: color 0.3s ease; /* Suavizado del cambio de color */
+}
+
+.nav-link:hover {
+    color: #b0290a; 
+}
+
+.nav-link.active {
+    font-weight: 700; /* Bold para el enlace activo */
+    color: #b0290a !important; 
+}
