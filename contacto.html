@@ -61,7 +61,7 @@
                 <label for="guest-phone" class="form-label">Teléfono</label>
                 <input type="tel" class="form-control" id="guest-phone" required>
             </div>
-            <div class="d-grid">
+            <div>
                 <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
             </div>
         </form>        
@@ -80,18 +80,28 @@
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-
-            <!-- Newsletter -->
-            <div class="col-md-6 d-flex justify-content-center align-items-center">
-                <div class="newsletter-box d-flex flex-column align-items-center">
-                    <h4 class="mb-3">NEWSLETTER</h4>
-                    <p class="mb-3 text-center">Suscríbete a nuestro Newsletter para estar al tanto de los cambios en el menú y nuestras ofertas.</p>
-                    <input type="email" id="newsletter-email" class="form-control mb-3" placeholder="Email">
-                    <button id="subscribe-btn" class="btn btn-primary w-100">Suscríbete</button>
+    
+            <!-- Indicaciones de cómo llegar -->
+            <div class="col-md-6">
+                <div class="how-to-get-container">
+                    <h4>¿Cómo llegar?</h4>
+                    <div class="directions">
+                        <h5>Desde el metro</h5>
+                        <p>La estación más cercana es "Alfonso XIII". Desde allí, se camina 5 minutos hasta nuestro local.</p>
+    
+                        <h5>Desde el bus</h5>
+                        <p>Las líneas 9 y 12 tienen parada cerca. Bájate en "Alfonso XIII - Avenida de la República Argentina" y camina 3 minutos.</p>
+    
+                        <h5>En coche</h5>
+                        <p>Si vienes en coche, hay aparcamiento disponible en las cercanías. Se tarda aproximadamente 10 minutos desde la M-30.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    
+        <!-- Newsletter (centrado en la página) -->
+      
+    
 
 
 
@@ -113,11 +123,21 @@
             <div class="col-md-4">
                 <div class="contact-box">
                     <i class="fa fa-map-marker fa-2x mb-3"></i>
-                    <p class="contact-text">Av. de Alfonso XIII, 97, Chamartín, Madrid<br>¡Estamos en el metro de Umami!</p>
+                    <p class="contact-text">Av. de Alfonso XIII, 97, Chamartín, Madrid<br>¡Estamos en el metro de Colombia!</p>
                 </div>
             </div>
         </div>
     </section>
+    <div class="newsletter-container">
+        <div class="newsletter-box">
+            <h4>NEWSLETTER</h4>
+            <p class="mb-3 text-center">Suscríbete a nuestro Newsletter para estar al tanto de los cambios en el menú y nuestras ofertas.</p>
+            <input type="email" id="newsletter-email" class="form-control mb-3" placeholder="Email">
+            <button id="subscribe-btn" class="btn btn-primary w-100">Suscríbete</button>
+        </div>
+    </div>
+</div>
+
 
 
 

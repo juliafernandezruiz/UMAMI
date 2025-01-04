@@ -48,7 +48,7 @@
 }
 
 #reservations {
-    background-image: url(../media/img/grid.png);
+    background-image: url('../media/img/grid.png');
     background-size: cover;
     height: 70vh;
     font-weight: bolder;
@@ -81,6 +81,52 @@
     position: absolute;
 }
 
+/* Mapa */
+.map-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+    border: 2px solid #FF3A0E;
+    border-radius: 8px;
+}
+
+/* Indicaciones "Cómo llegar" */
+.how-to-get-container {
+    padding: 20px;
+    background-color: var(--beige);
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.how-to-get-container h4 {
+    font-family: 'Paytone One', sans-serif ;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.directions h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.directions p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Newsletter - Centrando el contenido */
+.newsletter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
 .newsletter-box {
     background-color: var(--orange);
     color: var(--white);
@@ -89,21 +135,15 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.newsletter-box > h4 {
+.newsletter-box h4 {
     font-family: 'Paytone One', sans-serif;
     font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.newsletter-box p {
-    font-size: 1rem;
     margin-bottom: 15px;
 }
 
@@ -136,6 +176,7 @@
     color: var(--white);
     border-color: var(--orange);
 }
+
 
 .contact-box {
     background-color: var(--orange);
