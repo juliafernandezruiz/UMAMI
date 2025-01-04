@@ -9,50 +9,93 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body class="contacto">
+
+    <!-- Header -->
     <header class="container text-center py-3">
         <h1>HEADER-MENÚ</h1>
     </header>
 
-    <section id="header-contacto" class="container-fluid text-center py-5">
-        <h1 class="contact-title">Contacto</h1>
-        <p>Desde Umami te proporcionamos una atención personalizada. Si te surge cualquier tipo de duda no dudes en contactarnos.</p>
+    <!-- Sección de Contacto -->
+    <section id="header-contacto" class="container-fluid py-5 align-items-center justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <h1 class="contact-title mb-3">Contacto</h1>
+                <p class="mx-auto">
+                    Desde Umami te proporcionamos una atención personalizada. Si te surge cualquier tipo de duda no dudes en contactarnos.
+                </p>
+            </div>
+        </div>
     </section>
 
+
+    
+
+    <!-- Reserva -->
+    <section id="reservations" class="container my-5">
+        <h1 class="text-center mb-4">Reserva tu Mesa</h1>
+        <form id="reservation-form">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="reservation-date" class="form-label">Fecha</label>
+                    <input type="text" class="form-control" id="reservation-date" placeholder="Selecciona una fecha" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="reservation-time" class="form-label">Hora</label>
+                    <input type="text" class="form-control" id="reservation-time" placeholder="Selecciona una hora" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="guest-count" class="form-label">Número de Personas</label>
+                    <input type="number" class="form-control" id="guest-count" min="1" max="20" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="guest-name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="guest-name" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="guest-phone" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="guest-phone" required>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+            </div>
+        </form>        
+    </section>
+
+
+
+    <!-- Mapa y Newsletter -->
     <div class="container">
         <div class="row">
+            <!-- Mapa -->
             <div class="col-md-6">
-                <form id="contact-form">
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <input type="email" id="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="tel" id="phone" class="form-control" placeholder="Tlf.">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" id="name" class="form-control" placeholder="Nombre">
-                    </div>
-                    <div class="mb-3">
-                        <textarea id="message" class="form-control" placeholder="Mensaje" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+                <div class="map-container" style="position: relative; height: 0; padding-bottom: 100%; border: 2px solid #FF3A0E; border-radius: 8px;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.104768036676!2d-3.6746112843987997!3d40.45978205965186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228d7c4f4b2ef%3A0x47d0b228db327239!2sAv.%20de%20Alfonso%20XIII%2C%2097%2C%2028036%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sus!4v1609364344812!5m2!1ses!2sus"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
 
-            <div class="col-md-6 d-flex align-items-center justify-content-center">
-                <div class="newsletter-box">
-                    <h4>NEWSLETTER</h4>
-                    <p>Suscríbete a nuestro Newsletter para estar al tanto de los cambios en el menú y nuestras ofertas.</p>
+            <!-- Newsletter -->
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <div class="newsletter-box d-flex flex-column align-items-center">
+                    <h4 class="mb-3">NEWSLETTER</h4>
+                    <p class="mb-3 text-center">Suscríbete a nuestro Newsletter para estar al tanto de los cambios en el menú y nuestras ofertas.</p>
                     <input type="email" id="newsletter-email" class="form-control mb-3" placeholder="Email">
-                    <button id="subscribe-btn" class="btn">Suscríbete</button>
+                    <button id="subscribe-btn" class="btn btn-primary w-100">Suscríbete</button>
                 </div>
             </div>
         </div>
     </div>
 
+
+
+    <!-- Información de Contacto -->
     <section id="contact-info" class="container text-center py-5">
         <div class="row">
             <div class="col-md-4">
@@ -76,12 +119,9 @@
         </div>
     </section>
 
-    <div class="map-container">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.104768036676!2d-3.6746112843987997!3d40.45978205965186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228d7c4f4b2ef%3A0x47d0b228db327239!2sAv.%20de%20Alfonso%20XIII%2C%2097%2C%2028036%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sus!4v1609364344812!5m2!1ses!2sus"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
 
+
+    <!-- Generar Tarjeta -->
     <section id="personalized-card" class="container text-center py-5">
         <h2>Genera tu tarjeta personalizada</h2>
         <p>Escribe tu nombre y tu fecha de nacimiento para descubrir cómo se escribe en japonés y recibir una recomendación especial.</p>
@@ -93,7 +133,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Modal (Pop-up) -->
     <div id="card-result" class="modal fade" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -113,9 +153,10 @@
             </div>
         </div>
     </div>
-    
-    
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

@@ -9,63 +9,112 @@
 * {
     box-sizing: border-box;
 }
-
-.contacto{
+.contacto {
     background-color: var(--beige);
-}
-
-/* Header Contacto */
-#header-contacto {
-    background-color: var(--beige);
-    background-image: url('../media/img/headercontacto.png');
-}
-.container {
-    padding-top: 5%;
 }
 
 .contact-title {
+    font-size: 4em;
     font-family: 'Paytone One', sans-serif;
     color: var(--orange);
 }
 
-/* Formulario */
-form {
-    background-color: var(--beige); /* Fondo beige */
-    padding: 20px;
-    border: 1px solid var(--orange);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+#header-contacto {
+    background-color: var(--beige);
+    display: flex;
+    align-items: center;
+    background-image: url('../media/img/headerweb.png');
+    background-size: cover;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--orange);
-    border-radius: 4px; /* Bordes ligeramente redondeados */
+#header-contacto > div {
+    width: 50%;
+    display: flex;
+    align-items: center !important;
 }
 
-form .row .col-md-6 {
-    padding-right: 10px; /* Espaciado entre los campos de email y teléfono */
+.container {
+    padding-top: 5%;
 }
 
-form button {
-   background-color: var(--blue)!important;
+.mx-auto {
+    color: var(--orange) !important;
+    font-weight: bold;
 }
+
+.text-orange {
+    color: var(--orange) !important;
+    font-weight: bold;
+}
+
+#reservations {
+    background-image: url(../media/img/grid.png);
+    background-size: cover;
+    height: 70vh;
+    font-weight: bolder;
+}
+
+#reservations h1 {
+    font-size: 2rem;
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+}
+
+#reservations form {
+    background-color: var(--orange);
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservation-form .btn-primary {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+#reservation-form .btn-primary:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+
+.map-container iframe {
+    position: absolute;
+}
+
 .newsletter-box {
     background-color: var(--orange);
     color: var(--white);
     padding: 20px;
-    border-radius: 8px; /* Bordes redondeados */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.newsletter-box > h4 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-box p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
 .newsletter-box input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid var(--white);
     background-color: var(--white);
-    border-radius: 4px; /* Bordes redondeados */
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 .newsletter-box button {
@@ -76,19 +125,29 @@ form button {
     font-weight: bold;
     text-align: center;
     display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.newsletter-box button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
 }
 
 .contact-box {
     background-color: var(--orange);
     color: var(--white);
     padding: 20px;
-    border-radius: 8px; /* Bordes redondeados */
+    border-radius: 8px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Para que todas las cajas tengan el mismo tamaño */
+    height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,18 +165,19 @@ form button {
 
 @media (max-width: 767px) {
     .contact-box {
-        margin-bottom: 20px; /* Separación entre las cajas en pantallas pequeñas */
+        margin-bottom: 20px;
     }
 }
+
 #personalized-card {
     background-color: var(--beige);
     border-top: 2px solid var(--orange);
     padding: 40px 20px;
 }
+
 #card-content {
     font-family: 'Paytone One', sans-serif;
     color: var(--orange);
     text-align: center;
     border-radius: 8px;
 }
-    
