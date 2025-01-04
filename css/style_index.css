@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F8F2EF; /* Fondo igual para toda la página */
+}
+
+/* Encabezado */
+header {
+    background-color: #F8F2EF;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ff3a0e;
+}
+
+/* Contenedor del logo */
+.header-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    position: relative;
+    height: 100px; /* Ajusta la altura total del header */
+}
+
+/* Logo UMAMI */
+.logo {
+    margin: 0;
+    font-size: 4rem; /* Tamaño del logo */
+    color: #ff3a0e;
+    font-family: 'Paytone One', sans-serif;
+    text-align: center;
+}
+
+/* Texto japonés */
+.japanese-text {
+    position: absolute;
+    right: 30px; /* Ubica el texto al final del header */
+    transform: translateY(-50%); /* Asegura que esté exactamente centrado */
+    font-size: 1.7rem;
+    color: #1E0FDA;
+    writing-mode: vertical-rl; /* Orientación vertical */
+    text-orientation: upright;
+    padding-bottom: 2.7em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; /* Bold */
+}
