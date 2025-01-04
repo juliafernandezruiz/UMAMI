@@ -47,6 +47,18 @@ $(document).ready(function () {
         // Mostrar el modal
         $('#card-result').modal('show');
     });
+    $(document).ready(function() {
+        flatpickr("#reservation-date", {
+            dateFormat: "Y-m-d",
+            minDate: "today"
+        });
+        flatpickr("#reservation-time", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+            time_24hr: true
+        });
+    });
 
     function convertToHiragana(name) {
         const hiraganaMap = {

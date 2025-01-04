@@ -5,67 +5,225 @@
     --orange: #FF3A0E;
     --beige: #F8F2EF;
 }
+body {
+    margin: 0;
+    background-color: var(--beige); /* Fondo igual para toda la página */
+}
+header {
+    background-color: var(--beige);
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--orange);
+}
+.header-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+    height: 100px; 
+}
+
+.logo {
+    margin: 0;
+    font-size: 4rem; 
+    color: var(--orange);
+    font-family: 'Paytone One', sans-serif;
+    text-align: center;
+}
+
+.japanese-text {
+    position: absolute;
+    right: 30px; 
+    transform: translateY(-50%); 
+    font-size: 1.7rem;
+    color: var(--blue);
+    writing-mode: vertical-rl; 
+    text-orientation: upright;
+    padding-bottom: 2.7em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; 
+}
+
+
+.navbar {
+    background-color: var(--beige); 
+    border-bottom: 1px solid var(--orange); 
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em; 
+    padding-left: 17em;
+}
+
+.nav-link {
+    font-size: 1em;
+    font-weight: 400; 
+    color: var(--orange); 
+    text-transform: uppercase;
+    transition: color 0.3s ease; 
+}
+
+.nav-link:hover {
+    color:var(--orange); 
+}
+
+.nav-link.active {
+    font-weight: 700; /* Bold para el enlace activo */
+    color: var(--orange) !important; 
+}
 
 * {
     box-sizing: border-box;
 }
-
-.contacto{
+.contacto {
     background-color: var(--beige);
-}
-
-/* Header Contacto */
-#header-contacto {
-    background-color: var(--beige);
-    background-image: url('../media/img/headercontacto.png');
-}
-.container {
-    padding-top: 5%;
 }
 
 .contact-title {
+    font-size: 4em;
     font-family: 'Paytone One', sans-serif;
     color: var(--orange);
 }
 
-/* Formulario */
-form {
-    background-color: var(--beige); /* Fondo beige */
+#header-contacto {
+    background-color: var(--beige);
+    display: flex;
+    align-items: center;
+    background-image: url('../media/img/headerweb.png');
+    background-size: cover;
+}
+
+#header-contacto > div {
+    width: 50%;
+    display: flex;
+    align-items: center !important;
+}
+
+.container {
+    padding-top: 1em;
+}
+
+.mx-auto {
+    color: var(--orange) !important;
+    font-weight: bold;
+    
+}
+
+.text-orange {
+    color: var(--orange) !important;
+    font-weight: bold;
+}
+
+#reservations {
+    background-image: url('../media/img/grid.png');
+    background-size: cover;
+    height: 70vh;
+    font-weight: bolder;
+}
+
+#reservations h1 {
+    font-size: 2rem;
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+}
+
+#reservations form {
+    background-color: var(--orange);
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#reservation-form .btn-primary {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+#reservation-form .btn-primary:hover {
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+
+
+.map-container iframe {
+    position: absolute;
+}
+
+/* Mapa */
+.map-container {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+    border: 2px solid #FF3A0E;
+    border-radius: 8px;
+}
+
+/* Indicaciones "Cómo llegar" */
+.how-to-get-container {
     padding: 20px;
-    border: 1px solid var(--orange);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    background-color: var(--beige);
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid var(--orange);
-    border-radius: 4px; /* Bordes ligeramente redondeados */
+.how-to-get-container h4 {
+    font-family: 'Paytone One', sans-serif ;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--orange);
 }
 
-form .row .col-md-6 {
-    padding-right: 10px; /* Espaciado entre los campos de email y teléfono */
+.directions h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-form button {
-   background-color: var(--blue)!important;
+.directions p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
+
+/* Newsletter - Centrando el contenido */
+.newsletter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
 .newsletter-box {
     background-color: var(--orange);
     color: var(--white);
     padding: 20px;
-    border-radius: 8px; /* Bordes redondeados */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.newsletter-box h4 {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
 .newsletter-box input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid var(--white);
     background-color: var(--white);
-    border-radius: 4px; /* Bordes redondeados */
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
 .newsletter-box button {
@@ -76,19 +234,29 @@ form button {
     font-weight: bold;
     text-align: center;
     display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    max-width: 250px;
+    transition: background-color 0.3s, border-color 0.3s;
 }
+
+.newsletter-box button:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+}
+
 
 .contact-box {
     background-color: var(--orange);
     color: var(--white);
-    padding: 20px;
-    border-radius: 8px; /* Bordes redondeados */
+    padding: 15%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Para que todas las cajas tengan el mismo tamaño */
+    height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -104,20 +272,62 @@ form button {
     line-height: 1.5;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 750px) {
     .contact-box {
-        margin-bottom: 20px; /* Separación entre las cajas en pantallas pequeñas */
+        margin-bottom: 20px;
     }
-}
+
+
 #personalized-card {
     background-color: var(--beige);
     border-top: 2px solid var(--orange);
     padding: 40px 20px;
 }
+.container > div.row > .col-md-6 { 
+    padding-top: 4em;}
+
 #card-content {
     font-family: 'Paytone One', sans-serif;
     color: var(--orange);
     text-align: center;
     border-radius: 8px;
 }
+#contact-info > .row > .col-md-4 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+#header-contacto {
+    height: 30px;
+    width: auto;
     
+}
+
+#header-contacto > div {
+    width: 100%; /* En pantallas pequeñas, ocupamos el 100% */
+    padding: 1rem; /* Añadimos algo de padding para evitar que el contenido esté pegado */
+
+}
+#header-contacto > div > .col-12 {
+    display: flex;
+    justify-content: center;
+}
+
+
+#header-contacto h1 {
+    font-size: 3rem; /* Reducimos el tamaño de la fuente para mejor legibilidad */
+    display: flex;
+    align-items: center;
+}
+
+#header-contacto p {
+    display: none;
+    
+}
+
+}
+
+
+
+
+
+
