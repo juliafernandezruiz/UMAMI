@@ -145,7 +145,69 @@ header {
     flex: 0.7;
 }
 
-.foto-historia img {
+.foto-historia > img {
     width: 100%;
     height: auto;
+}
+
+
+/* POSTERS */
+.posters-img{
+    width: 100%;
+}
+
+.posters-img > img {
+    width: 100%;
+}
+
+
+/* CHEFS */
+#nuestros-chefs {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--beige);
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    font-size: 3em;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: transparent;
+    max-width: 300px;
+    text-align: center;
+    border: none;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-nombre {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+}
+
+.card-descripcion {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--blue);
 }
