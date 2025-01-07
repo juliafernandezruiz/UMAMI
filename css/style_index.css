@@ -1,7 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #F8F2EF; /* Fondo igual para toda la página */
+    background-color: #F8F2EF; 
 }
 
 /* Encabezado */
@@ -14,16 +13,16 @@ header {
 /* Contenedor del logo */
 .header-content {
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
+    align-items: center; 
+    justify-content: center; 
     position: relative;
-    height: 100px; /* Ajusta la altura total del header */
+    height: 100px; 
 }
 
 /* Logo UMAMI */
 .logo {
     margin: 0;
-    font-size: 4rem; /* Tamaño del logo */
+    font-size: 4rem; 
     color: #ff3a0e;
     font-family: 'Paytone One', sans-serif;
     text-align: center;
@@ -32,11 +31,11 @@ header {
 /* Texto japonés */
 .japanese-text {
     position: absolute;
-    right: 30px; /* Ubica el texto al final del header */
-    transform: translateY(-50%); /* Asegura que esté exactamente centrado */
+    right: 30px; 
+    transform: translateY(-50%); 
     font-size: 1.7rem;
     color: #1E0FDA;
-    writing-mode: vertical-rl; /* Orientación vertical */
+    writing-mode: vertical-rl; 
     text-orientation: upright;
     padding-bottom: 2.7em;
     font-family: 'Inter', sans-serif;
@@ -46,24 +45,24 @@ header {
 /* MENÚ */
 
 .navbar {
-    background-color: #F8F2EF; /* Fondo del menú */
-    border-bottom: 1px solid #ff3a0e; /* Línea roja debajo */
+    background-color: #F8F2EF; 
+    border-bottom: 1px solid #ff3a0e; 
 }
 
 .navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4em; /* Espacio uniforme entre enlaces */
+    gap: 4em; 
     padding-left: 17em;
 }
 
 .nav-link {
     font-size: 1em;
-    font-weight: 400; /* Regular por defecto */
-    color: #ff3a0e; /* Color de los enlaces */
+    font-weight: 400; 
+    color: #ff3a0e; 
     text-transform: uppercase;
-    transition: color 0.3s ease; /* Suavizado del cambio de color */
+    transition: color 0.3s ease; 
 }
 
 .nav-link:hover {
@@ -71,6 +70,104 @@ header {
 }
 
 .nav-link.active {
-    font-weight: 700; /* Bold para el enlace activo */
+    font-weight: 700; 
     color: #b0290a !important; 
+}
+
+/* Sakura Roll Section */
+.sakura-roll-section {
+    background-color: #F8F2EF; /* Fondo */
+    padding: 4rem 0;
+}
+
+/* Título */
+.sakura-title {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2.5rem;
+    color: #ff3a0e;
+    margin-bottom: 1rem;
+}
+
+/* Descripción */
+.sakura-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #0000008C;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Botón */
+.pronto-disponible-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ff3a0e;
+    background-color: transparent;
+    border: 2px solid #ff3a0e;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pronto-disponible-btn:hover {
+    background-color: #1E0FDA; /* Azul de la web */
+    color: #ffffff; /* Texto blanco */
+    border-color: #1E0FDA;
+}
+
+/* Grid de imágenes */
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Imagen principal */
+.main-image {
+    border: 1px solid #ff3a0e; /* Borde rojo */
+    margin-bottom: 1rem;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Imágenes pequeñas */
+.small-images {
+    display: flex;
+    justify-content: space-between; /* Espacio igual entre las imágenes */
+    gap: 0.5rem;
+}
+
+.small-image {
+    flex: 1; /* Todas las imágenes pequeñas tienen el mismo ancho */
+    border: 1px solid #ff3a0e; /* Borde rojo */
+}
+
+.small-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.small-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.small-images img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ff3a0e; /* Borde rojo */
 }
