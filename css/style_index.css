@@ -75,99 +75,94 @@ header {
 }
 
 /* Sakura Roll Section */
-.sakura-roll-section {
-    background-color: #F8F2EF; /* Fondo */
-    padding: 4rem 0;
+#sakura-roll{
+    display: flex;
+    align-items: center;
 }
 
-/* Título */
-.sakura-title {
+
+.texto-sakura {
+    flex: 0.8;
+    margin: 0 3em 0 6em;
+}
+
+
+.sakura-titulo{
     font-family: 'Paytone One', sans-serif;
-    font-size: 2.5rem;
-    color: #ff3a0e;
-    margin-bottom: 1rem;
+    color: #FF3A0E;
+    font-size: 3em;
+    margin-bottom: 1em;
 }
 
-/* Descripción */
-.sakura-description {
-    font-family: 'Inter', sans-serif;
+
+.sakura-texto {
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400; 
+    color: #FF3A0E; 
     font-size: 1rem;
-    color: #0000008C;
-    line-height: 1.6;
-    margin-bottom: 2rem;
 }
 
-/* Botón */
-.pronto-disponible-btn {
-    font-family: 'Inter', sans-serif;
+
+/* Contenedor general del botón */
+.botones-sakura {
+    margin-top: 3em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+/* Estilo base del botón */
+.boton {
+    display: inline-block;
+    padding: 0.6rem 1.5rem; 
     font-size: 1rem;
-    font-weight: 700;
-    color: #ff3a0e;
-    background-color: transparent;
-    border: 2px solid #ff3a0e;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 600; 
+    color: #FF3A0E; 
+    text-decoration: none; 
+    border: 2px solid #FF3A0E; 
+    background-color: transparent; 
+    transition: all 0.3s ease; 
 }
 
-.pronto-disponible-btn:hover {
-    background-color: #1E0FDA; /* Azul de la web */
-    color: #ffffff; /* Texto blanco */
-    border-color: #1E0FDA;
+/* Hover del botón */
+.boton:hover {
+    background-color: #1E0FDA; 
+    color: #F8F2EF; 
+    border-color: #1E0FDA; 
 }
 
-/* Grid de imágenes */
-.image-grid {
+/* cuadricula fotos */
+.sakura-cuadricula {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Imagen principal */
-.main-image {
-    border: 1px solid #ff3a0e; /* Borde rojo */
-    margin-bottom: 1rem;
-}
-
-.main-image img {
+    flex-direction: column-reverse;
     width: 100%;
-    height: auto;
-    display: block;
+    max-width: 40em;
 }
 
-/* Imágenes pequeñas */
-.small-images {
+/* Imagen grande (arriba) */
+.grid-item-large {
+    height: 300px; 
+}
+
+.grid-item-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #FF3A0E; 
+    box-sizing: border-box;
+}
+
+/* Contenedor para las imágenes pequeñas */
+.grid-item-small {
     display: flex;
-    justify-content: space-between; /* Espacio igual entre las imágenes */
-    gap: 0.5rem;
+    
 }
 
-.small-image {
-    flex: 1; /* Todas las imágenes pequeñas tienen el mismo ancho */
-    border: 1px solid #ff3a0e; /* Borde rojo */
-}
-
-.small-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.main-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.small-images {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-}
-
-.small-images img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ff3a0e; /* Borde rojo */
+.grid-item-small img {
+    width: calc(100% - 0.5rem);
+    height: 12em;
+    object-fit: cover;
+    border: 1px solid #FF3A0E;
+    box-sizing: border-box;
 }
