@@ -96,3 +96,27 @@ $(document).ready(function () {
         return hiraganaName;
     }
 });
+
+
+
+// CARRUSEL 'NOSOTROS'
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 5, 
+    loop: true, 
+    loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        640: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        1024: {
+            slidesPerView: 5,
+        },
+    },
+});

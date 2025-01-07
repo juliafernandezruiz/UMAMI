@@ -1,0 +1,247 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #1E0FDA;
+    --orange: #FF3A0E;
+    --beige: #F8F2EF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.nosotros{
+    background-color: var(--beige);
+}
+
+
+/* MENÚ Y HEADER */
+/* Encabezado */
+header {
+    background-color: #F8F2EF;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ff3a0e;
+}
+
+/* Contenedor del logo */
+.header-content {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+    height: 100px; 
+}
+
+/* Logo UMAMI */
+.logo {
+    margin: 0;
+    font-size: 4rem; 
+    color: #ff3a0e;
+    font-family: 'Paytone One', sans-serif;
+    text-align: center;
+}
+
+/* Texto japonés */
+.japanese-text {
+    position: absolute;
+    right: 30px;
+    transform: translateY(-50%);
+    font-size: 1.7rem;
+    color: #1E0FDA;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-bottom: 2.7em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700; 
+}
+
+/* menu */
+.navbar {
+    background-color: #F8F2EF; 
+    border-bottom: 1px solid #ff3a0e; 
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    padding-left: 17em;
+}
+
+.nav-link {
+    font-size: 1em;
+    font-weight: 400; 
+    color: #ff3a0e;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #b0290a; 
+}
+
+.nav-link.active {
+    font-weight: 700;
+    color: #b0290a !important; 
+}
+
+/* HEADER */
+#header-nosotros {
+    background-color: var(--beige);
+    background-image: url('../media/img/headercontacto.png');
+}
+.container {
+    padding-top: 5%;
+}
+
+.nosotros-title {
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    font-size: 3.6em;
+}
+
+.nosotros-subtitle{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: var(--orange);
+    font-size: 1em;
+}
+
+.custom-line {
+    height: 1.5px;
+    background-color: var(--orange);
+    width: 100%;
+}
+
+
+/* NUESTRA HISTORIA */
+#nuestra-historia{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto-historia {
+    flex: 0.8;
+    margin: 0 9em 0 5em;
+}
+
+.historia-titulo{
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+
+.historia-texto{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--orange);
+    font-size: 1.1em;
+}
+
+.foto-historia {
+    flex: 0.7;
+}
+
+.foto-historia > img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* POSTERS */
+.posters-img{
+    width: 100%;
+}
+
+.posters-img > img {
+    width: 100%;
+}
+
+
+/* CHEFS */
+#nuestros-chefs {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--beige);
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    font-size: 3em;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: transparent;
+    max-width: 300px;
+    text-align: center;
+    border: none;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-nombre {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem 0 0.5rem;
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+}
+
+.card-descripcion {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--blue);
+}
+
+
+/* CARRUSEL */
+#carrusel {
+    background-color: var(--beige);
+    padding-top: 4em;
+    padding-bottom: 4em;
+    overflow: hidden;
+}
+
+.swiper-container {
+    width: 100vw; 
+    height: 60vh; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    flex: 0 0 auto; 
+    width: calc(100% / 5) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
