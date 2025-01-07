@@ -166,3 +166,76 @@ header {
     border: 1px solid #FF3A0E;
     box-sizing: border-box;
 }
+
+/* POSTERS */
+.posters-img{
+    width: 100%;
+}
+
+
+.posters-img > img {
+    width: 100%;
+}
+
+/* CARRUSEL*/
+#carrusel-favoritos {
+    text-align: center;
+    margin: 2em auto;
+    background-color: var(--beige);
+    padding: 2em;
+}
+
+.carrusel-titulo {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2.5em;
+    color: #FF3A0E;
+    margin-bottom: 1em;
+}
+
+/* Contenedor del carrusel */
+.carrusel-contenedor {
+    position: relative;
+    overflow: hidden;
+    max-width: 90%; 
+    margin: auto;
+}
+
+/* Carrusel */
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Elementos del carrusel */
+.carrusel-item {
+    flex: 0 0 auto;
+    margin: 0 0.5em;
+    border: 2px solid #FF3A0E;
+    object-fit: cover;
+}
+
+/* Flechas de navegación */
+.carrusel-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--beige);
+    border: none;
+    font-size: 2em;
+    color: #FF3A0E;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    z-index: 10;
+}
+
+.carrusel-flecha.izquierda {
+    left: 0;
+}
+
+.carrusel-flecha.derecha {
+    right: 0;
+}
+
+.carrusel-flecha:hover {
+    color: #1E0FDA;
+}
