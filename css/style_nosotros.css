@@ -89,7 +89,8 @@ header {
 /* HEADER */
 #header-nosotros {
     background-color: var(--beige);
-    background-image: url('../media/img/headercontacto.png');
+    background-image: url('../media/img/headerweb.png');
+    background-size: cover;
 }
 .container {
     padding-top: 5%;
@@ -117,35 +118,24 @@ header {
 
 /* NUESTRA HISTORIA */
 #nuestra-historia{
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
+    padding: 2em 2em;
 }
 
-.texto-historia {
-    flex: 0.8;
-    margin: 0 9em 0 5em;
-}
-
-.historia-titulo{
+.historia-titulo {
     font-family: 'Paytone One', sans-serif;
     color: var(--orange);
     font-size: 3em;
     margin-bottom: 1em;
 }
 
-.historia-texto{
+.historia-texto {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: var(--orange);
     font-size: 1.1em;
 }
 
-.foto-historia {
-    flex: 0.7;
-}
-
-.foto-historia > img {
+.foto-historia img {
     width: 100%;
     height: auto;
 }
@@ -162,7 +152,7 @@ header {
 
 
 /* CHEFS */
-#nuestros-chefs {
+/* #nuestros-chefs {
     text-align: center;
     padding: 3rem 1rem;
     background-color: var(--beige);
@@ -211,7 +201,26 @@ header {
     font-weight: 400;
     color: var(--blue);
 }
-
+ */
+ .titulo {
+    color: #ff4500; 
+    font-weight: bold;
+}
+.card {
+    background-color: var(--beige);
+}
+.chef-img {
+    width:100%; 
+   
+    margin: 0 auto;
+}
+.card-nombre {
+    color: #ff4500; 
+    font-weight: bold;
+}
+.card-descripcion {
+    color: #007bff; 
+}
 
 /* CARRUSEL */
 #carrusel {

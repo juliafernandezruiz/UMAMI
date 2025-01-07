@@ -14,6 +14,12 @@ header {
     padding: 5px 10px;
     border-bottom: 1px solid var(--orange);
 }
+.custom-line {
+    height: 1.5px;
+    background-color: var(--orange);
+    width: 100%;
+}
+
 .header-content {
     display: flex;
     align-items: center; 
@@ -86,41 +92,45 @@ header {
     font-family: 'Paytone One', sans-serif;
     color: var(--orange);
 }
-
 #header-contacto {
     background-color: var(--beige);
-    display: flex;
-    align-items: center;
     background-image: url('../media/img/headerweb.png');
     background-size: cover;
 }
-
-#header-contacto > div {
-    width: 50%;
-    display: flex;
-    align-items: center !important;
-}
-
 .container {
-    padding-top: 1em;
+    padding-top: 5%;
 }
 
-.mx-auto {
-    color: var(--orange) !important;
-    font-weight: bold;
-    
+.contacto-title {
+    font-family: 'Paytone One', sans-serif;
+    color: var(--orange);
+    font-size: 3.6em;
 }
 
-.text-orange {
-    color: var(--orange) !important;
+.contacto-subtitle{
+    font-family: 'Inter', sans-serif;
     font-weight: bold;
+    color: var(--orange);
+    font-size: 1em;
 }
 
 #reservations {
     background-image: url('../media/img/grid.png');
-    background-size: cover;
-    height: 70vh;
-    font-weight: bolder;
+    background-size: contain;
+    margin: 0 auto !important;
+    background-position: center;
+    display: flex;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+
+}
+.my-5 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-right: 0!important;
+    margin-top: 0!important
 }
 
 #reservations h1 {
@@ -156,7 +166,6 @@ header {
     height: 0;
     padding-bottom: 100%;
     border: 2px solid #FF3A0E;
-    border-radius: 8px;
 }
 
 /* Indicaciones "Cómo llegar" */
@@ -295,33 +304,6 @@ header {
 #contact-info > .row > .col-md-4 {
     margin-top: 1em;
     margin-bottom: 1em;
-}
-#header-contacto {
-    height: 30px;
-    width: auto;
-    
-}
-
-#header-contacto > div {
-    width: 100%; /* En pantallas pequeñas, ocupamos el 100% */
-    padding: 1rem; /* Añadimos algo de padding para evitar que el contenido esté pegado */
-
-}
-#header-contacto > div > .col-12 {
-    display: flex;
-    justify-content: center;
-}
-
-
-#header-contacto h1 {
-    font-size: 3rem; /* Reducimos el tamaño de la fuente para mejor legibilidad */
-    display: flex;
-    align-items: center;
-}
-
-#header-contacto p {
-    display: none;
-    
 }
 
 }

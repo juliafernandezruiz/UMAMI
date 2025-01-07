@@ -89,7 +89,8 @@ header {
 /* HEADER */
 #header-menu {
     background-color: var(--beige);
-    background-image: url('../media/img/headercontacto.png');
+    background-image: url('../media/img/headerweb.png');
+    background-size: cover;
 }
 .container {
     padding-top: 5%;
@@ -256,7 +257,7 @@ header {
 
 /* hover */
 .card:hover img {
-  transform: scale(1.1); /* Amplía la imagen */
+  transform: scale(1.1); 
   cursor: pointer;
 }
 
