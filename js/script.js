@@ -47,6 +47,7 @@ $(document).ready(function () {
         // Mostrar el modal
         $('#card-result').modal('show');
     });
+
     $(document).ready(function() {
         flatpickr("#reservation-date", {
             dateFormat: "Y-m-d",

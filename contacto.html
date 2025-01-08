@@ -9,6 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body class="contacto">
@@ -27,16 +28,16 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">INICIO</a>
+                        <a class="nav-link" href="index.html">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="order.html">MENÚ</a>
+                        <a class="nav-link" href="menu.html">MENÚ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ubi.html">NOSOTROS</a>
+                        <a class="nav-link" href="nosotros.html">NOSOTROS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ubi.html">RESERVAS</a>
+                        <a class="nav-link" href="contacto.html">RESERVAS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="contacto.html">CONTACTO</a>
@@ -55,7 +56,7 @@
     </section>
     <div class="custom-line"></div>
 
-    <section id="reservations" class="container my-5">
+    <section id="reservations" class="container my-5" data-scroll data-scroll-speed="1">
         <h1 class="text-center mb-4">Reserva tu Mesa</h1>
         <form id="reservation-form">
             <div class="row">
@@ -89,7 +90,7 @@
     </section>
     <div class="custom-line"></div>
 
-    <div class="container">
+    <div class="container" data-scroll data-scroll-speed="2">
         <div class="row">
             <div class="col-md-6">
                 <div class="map-container" style="position: relative; height: 0; padding-bottom: 100%; border: 2px solid #FF3A0E;">
@@ -182,6 +183,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
