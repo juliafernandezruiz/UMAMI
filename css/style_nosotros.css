@@ -248,6 +248,110 @@ header {
 }
 
 
+/* FOOTER */
+footer {
+    background-color: #F8F2EF;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* Línea horizontal azul */
+.line {
+    height: 1px;
+    background-color: #1E0FDA;
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+/* Enlaces principales */
+.text-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4em;
+    margin: 0 auto 2em auto;
+    max-width: 60%;
+}
+
+.column h3 {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #FF3A0E;
+    cursor: pointer;
+    font-weight: bold
+}
+
+.column h3.bold {
+    font-weight: 700;
+    color: #1E0FDA;
+}
+
+/* Redes sociales */
+.social-media {
+    display: grid
+;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3em;
+    max-width: 40%;
+    margin: 0 auto 2em auto;
+}
+.column-sm i {
+    font-size: 1.5em;
+    color: #FF3A0E;
+    transition: color 0.3s ease;
+}
+
+.column-sm i:hover {
+    color: #1E0FDA;
+}
+
+/* Política de privacidad */
+footer .privacy-policy h3 {
+    font-size: 0.9em; 
+    line-height: 1.2em; 
+    color: #FF3A0E; 
+    font-weight: bold
+}
+footer .privacy-policy h4 {
+    font-size: 0.9em; 
+    line-height: 1.4em; 
+    color: #FF3A0E; 
+}
+
+.row-policy h3 {
+    margin: 0.5em 0;
+}
+
+.footer-logo {
+    text-align: center; 
+    margin-top: 4em;   
+}
+
+.footer-logo img {
+    max-width: 100%; 
+    height: auto;     
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .text-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 90%;
+    }
+
+    .social-media {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        max-width: 60%;
+    }
+
+    .row-policy h3 {
+        font-size: 0.7em;
+    }
+}
+
+
 
 /* RESPONSIVE */
 /* tablet */
