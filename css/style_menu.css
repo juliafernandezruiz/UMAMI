@@ -86,6 +86,23 @@ header {
     color: #b0290a !important; 
 }
 
+/* Estilos para pantallas pequeñas */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        display: block; /* Cambia a un diseño vertical */
+        padding-left: 0; /* Ajusta el padding */
+        text-align: center; /* Centra los enlaces */
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.5em 0; /* Espaciado vertical entre enlaces */
+    }
+}
+
 /* HEADER */
 #header-menu {
     background-color: var(--beige);
@@ -519,6 +536,24 @@ footer .privacy-policy h4 {
     max-width: 100%; 
     height: auto;     
 }
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .text-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 90%;
+    }
+
+    .social-media {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        max-width: 60%;
+    }
+
+    .row-policy h3 {
+        font-size: 0.7em;
+    }
+}
 
 
 /* Ajustes responsivos */
@@ -692,6 +727,12 @@ footer .privacy-policy h4 {
     }
     .postres-carta{
         width: 60%;
+    }
+    .grid-large-row img {
+        height: 290px;
+    }
+    .grid-row img {
+        height: 360px;
     }
 }
 
