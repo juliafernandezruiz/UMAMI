@@ -43,7 +43,6 @@ header {
 }
 
 /* MENÚ */
-
 .navbar {
     background-color: #F8F2EF; 
     border-bottom: 1px solid #ff3a0e; 
@@ -55,6 +54,23 @@ header {
     align-items: center;
     gap: 4em; 
     padding-left: 17em;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        display: block; /* Cambia a un diseño vertical */
+        padding-left: 0; /* Ajusta el padding */
+        text-align: center; /* Centra los enlaces */
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.5em 0; /* Espaciado vertical entre enlaces */
+    }
 }
 
 .nav-link {
@@ -73,7 +89,6 @@ header {
     font-weight: 700; 
     color: #b0290a !important; 
 }
-
 /* Sakura Roll Section */
 #sakura-roll{
     display: flex;
@@ -120,7 +135,7 @@ header {
     font-weight: 600; 
     color: #FF3A0E; 
     text-decoration: none; 
-    border: 2px solid #FF3A0E; 
+    border: 1px solid #FF3A0E; 
     background-color: transparent; 
     transition: all 0.3s ease; 
 }
@@ -240,7 +255,211 @@ header {
     color: #1E0FDA;
 }
 
-/* Estilo general del footer */
+
+/* LÍNEA ROJA */
+.linea-separacion {
+    height: 1px;
+    background-color: #ff3a0e;
+    margin: 2em 0; 
+}
+
+/* SECCION NOSOTROS */
+.seccion-japon {
+    background-color: #f8f2ef; 
+    padding-bottom: 2em;
+}
+
+/* Contenido alineado a la izquierda */
+.contenido {
+    max-width: 70%; 
+    margin-left: 3%; 
+    color: #ff3a0e; 
+    padding: 2.5em;
+}
+
+/* Título */
+.titulo-seccion {
+    font-family: 'Paytone One', sans-serif; 
+    font-size: 2.5em; 
+    letter-spacing: -0.05em; 
+    margin-bottom: 1.5em;
+    text-align: left;
+    color: #ff3a0e; 
+    max-width: 60%;
+}
+
+/* Contenedor de texto en columnas */
+.texto-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 2em; 
+    margin-bottom: 2em;
+    padding-top: 1em;
+}
+
+/* Columnas */
+.columna p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    line-height: 1.6;
+    color: #ff3a0e; 
+}
+
+/* Botón */
+.boton-seccion {
+    margin-top: 3em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.boton-hover {
+    display: inline-block;
+    padding: 0.6rem 1.5rem; 
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif; 
+    font-weight: 600; 
+    color: #FF3A0E; 
+    text-decoration: none; 
+    border: 1px solid #FF3A0E; 
+    background-color: transparent; 
+    transition: all 0.3s ease; 
+}
+
+.boton-hover:hover {
+    background-color: #1E0FDA; 
+    color: #F8F2EF; 
+    border-color: #1E0FDA; 
+}
+
+/* LÍNEA ROJA */
+.linea-separacion{
+    height: 1px;
+    background-color: #ff3a0e;
+    margin: 2em 0; 
+}
+
+
+/*HORARIOS UBICACION*/
+
+#horarios-ubicacion {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-seccion {
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+    gap: 2em;
+    width: 80%;
+    max-width: 1200px;
+}
+
+
+.titulo-recuadro {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff3a0e;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.texto-recuadro {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ff3a0e;
+    margin-top: 2em;
+}
+
+.linea-vertical {
+    width: 2px;
+    background-color: #ff3a0e;
+    height: 100%; 
+    margin: 0 2em;
+    align-self: stretch; 
+}
+
+
+/* LÍNEA ROJA */
+.linea-separacion {
+    height: 1px;
+    background-color: #ff3a0e;
+    margin: 2em 0; 
+}
+
+
+.contenido-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    padding: 2em 3em 4em 5em;
+}
+
+.columna-texto {
+    flex: 1;
+    max-width: 50%; 
+    color: #ff3a0e;
+}
+
+.titulo {
+    font-family: 'Paytone One', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ff3a0e;
+    letter-spacing: -0.04em; 
+    max-width: 72%;
+}
+
+.texto {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ff3a0e;
+    padding-bottom: 1em;
+    max-width: 80%;
+}
+
+.botones {
+    margin-top: 2em;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #ff3a0e;
+    text-decoration: none;
+    border: 1px solid #ff3a0e;
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #1e0fda; /* Azul */
+    color: #f8f2ef; /* Beige */
+    border-color: #1e0fda;
+}
+
+.columna-imagen {
+    flex: 1;
+    max-width: 35%;
+}
+
+.columna-imagen img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* FOOTER */
 footer {
     background-color: #F8F2EF;
     font-family: 'Poppins', sans-serif;
@@ -249,7 +468,7 @@ footer {
 
 /* Línea horizontal azul */
 .line {
-    height: 2px;
+    height: 1px;
     background-color: #1E0FDA;
     width: 100%;
     margin-bottom: 4em;
@@ -298,15 +517,15 @@ footer {
 
 /* Política de privacidad */
 footer .privacy-policy h3 {
-    font-size: 0.9em; /* Cambia a un tamaño más pequeño */
-    line-height: 1.2em; /* Ajusta la altura de línea para que quede bien alineado */
-    color: #FF3A0E; /* Asegúrate de que el color se aplique */
+    font-size: 0.9em; 
+    line-height: 1.2em; 
+    color: #FF3A0E; 
     font-weight: bold
 }
 footer .privacy-policy h4 {
-    font-size: 0.9em; /* Cambia a un tamaño más pequeño */
-    line-height: 1.4em; /* Ajusta la altura de línea para que quede bien alineado */
-    color: #FF3A0E; /* Asegúrate de que el color se aplique */
+    font-size: 0.9em; 
+    line-height: 1.4em; 
+    color: #FF3A0E; 
 }
 
 .row-policy h3 {
@@ -314,13 +533,13 @@ footer .privacy-policy h4 {
 }
 
 .footer-logo {
-    text-align: center; /* Centra el logo horizontalmente */
-    margin-top: 4em;   /* Ajusta el espacio superior */
+    text-align: center; 
+    margin-top: 4em;   
 }
 
 .footer-logo img {
-    max-width: 100%; /* Ajusta el tamaño máximo del logo */
-    height: auto;     /* Mantén la proporción de la imagen */
+    max-width: 100%; 
+    height: auto;     
 }
 
 
