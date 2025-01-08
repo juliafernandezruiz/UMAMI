@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     console.log("Script cargado correctamente");
 
@@ -48,18 +49,6 @@ $(document).ready(function () {
         $('#card-result').modal('show');
     });
 
-    $(document).ready(function() {
-        flatpickr("#reservation-date", {
-            dateFormat: "Y-m-d",
-            minDate: "today"
-        });
-        flatpickr("#reservation-time", {
-            enableTime: true,
-            noCalendar: true,
-            dateFormat: "H:i",
-            time_24hr: true
-        });
-    });
 
     function convertToHiragana(name) {
         const hiraganaMap = {
@@ -98,26 +87,48 @@ $(document).ready(function () {
     }
 });
 
-
+$(document).ready(function() {
+    flatpickr("#reservation-date", {
+        dateFormat: "Y-m-d",
+        minDate: "today"
+    });
+    flatpickr("#reservation-time", {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: true
+    });
+});
 
 // CARRUSEL 'NOSOTROS'
 const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5, 
-    loop: true, 
-    loopFillGroupWithBlank: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
+slidesPerView: 5, 
+loop: true, 
+loopFillGroupWithBlank: true,
+autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+},
+breakpoints: {
+    640: {
+        slidesPerView: 3, // Cambiado a 3 para dispositivos pequeños
     },
-    breakpoints: {
-        640: {
-            slidesPerView: 3, // Cambiado a 3 para dispositivos pequeños
-        },
-        768: {
-            slidesPerView: 3, // Opcionalmente puedes mantener 3 para tablets
-        },
-        1024: {
-            slidesPerView: 5,
-        },
+    768: {
+        slidesPerView: 3, // Opcionalmente puedes mantener 3 para tablets
     },
+    1024: {
+        slidesPerView: 5,
+    },
+},
 });
+// Marcar como "activo" el enlace correspondiente según la página actual
+const currentUrl = window.location.href; // Obtiene la URL actual
+const links = document.querySelectorAll(".nav-link");
+
+links.forEach(link => {
+  if (currentUrl.includes(link.getAttribute("href"))) {
+      link.classList.add("active");
+  }
+});
+
+
