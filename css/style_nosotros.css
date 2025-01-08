@@ -353,5 +353,9 @@ header {
         height: 70%;
         object-fit: cover;
     }
+    .swiper-slide {
+        width: calc(100% / 3) !important;
+      }
 }
+
     
