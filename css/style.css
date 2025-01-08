@@ -112,6 +112,7 @@ header {
     font-weight: bold;
     color: var(--orange);
     font-size: 1em;
+    background-color: var(--beige);
 }
 
 #reservations {
@@ -280,6 +281,89 @@ header {
     margin: 0;
     line-height: 1.5;
 }
+footer {
+    background-color: #F8F2EF;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* Línea horizontal azul */
+.line {
+    height: 1px;
+    background-color: #1E0FDA;
+    width: 100%;
+    margin-bottom: 4em;
+}
+
+/* Enlaces principales */
+.text-footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4em;
+    margin: 0 auto 2em auto;
+    max-width: 60%;
+}
+
+.column h3 {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #FF3A0E;
+    cursor: pointer;
+    font-weight: bold
+}
+
+.column h3.bold {
+    font-weight: 700;
+    color: #1E0FDA;
+}
+
+/* Redes sociales */
+.social-media {
+    display: grid
+;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3em;
+    max-width: 40%;
+    margin: 0 auto 2em auto;
+}
+.column-sm i {
+    font-size: 1.5em;
+    color: #FF3A0E;
+    transition: color 0.3s ease;
+}
+
+.column-sm i:hover {
+    color: #1E0FDA;
+}
+
+/* Política de privacidad */
+footer .privacy-policy h3 {
+    font-size: 0.9em; 
+    line-height: 1.2em; 
+    color: #FF3A0E; 
+    font-weight: bold
+}
+footer .privacy-policy h4 {
+    font-size: 0.9em; 
+    line-height: 1.4em; 
+    color: #FF3A0E; 
+}
+
+.row-policy h3 {
+    margin: 0.5em 0;
+}
+
+.footer-logo {
+    text-align: center; 
+    margin-top: 4em;   
+}
+
+.footer-logo img {
+    max-width: 100%; 
+    height: auto;     
+}
+
+
 
 @media (max-width: 750px) {
     .contact-box {
@@ -305,7 +389,61 @@ header {
     margin-top: 1em;
     margin-bottom: 1em;
 }
+.contacto-subtitle {
+    display: none;
+}
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5em;
+    margin: 0 auto 2em auto;
+}
+.column-sm i {
+    font-size: 0.8em;
+    color: #FF3A0E;
+    transition: color 0.3s ease;
+}
 
+footer .privacy-policy h3 {
+    font-size: 0.5em;
+    line-height: 1.2em;
+    color: #FF3A0E;
+    font-weight: bold;
+}
+footer .privacy-policy h4 {
+    font-size: 0.5em;
+    line-height: 1.4em;
+    color: #FF3A0E;
+}
+.column h3 {
+    font-size: 0.6em;
+    font-weight: 400;
+    color: #FF3A0E;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav-link {
+    font-size: 0.6em;
+    font-weight: 400;
+    color: #ff3a0e;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.7em;
+    padding-left: 1em;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
+    padding-left: 4em;
+}
 }
 
 

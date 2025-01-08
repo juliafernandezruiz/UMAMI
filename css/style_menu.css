@@ -765,6 +765,96 @@ footer .privacy-policy h4 {
         width: 100%;
         text-align: center;
     }
+    .contacto-subtitle {
+        display: none;
+    }
+    .column-sm i {
+        font-size: 0.8em;
+        color: #FF3A0E;
+        transition: color 0.3s ease;
+    }
+    footer .privacy-policy h3 {
+        font-size: 0.5em;
+        line-height: 1.2em;
+        color: #FF3A0E;
+        font-weight: bold;
+    }
+    footer .privacy-policy h4 {
+        font-size: 0.5em;
+        line-height: 1.4em;
+        color: #FF3A0E;
+    }
+    .column h3 {
+        font-size: 0.6em;
+        font-weight: 400;
+        color: #FF3A0E;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .nav-link {
+        font-size: 0.6em;
+        font-weight: 400;
+        color: #ff3a0e;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.7em;
+        padding-left: 1em;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1em;
+        padding-left: 4em;
+    }
+    .social-media {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.5em;
+        margin: 0 auto 2em auto;
+    }
+    .text-footer {
+        display: flex;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.6em;
+        margin: 0 auto 2em auto;
+        max-width: 60%;
+        justify-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .column-sm i {
+        font-size: 0.8em;
+        color: #FF3A0E;
+        transition: color 0.3s ease;
+    }
+    
+    footer .privacy-policy h3 {
+        font-size: 0.5em;
+        line-height: 1.2em;
+        color: #FF3A0E;
+        font-weight: bold;
+    }
+    footer .privacy-policy h4 {
+        font-size: 0.5em;
+        line-height: 1.4em;
+        color: #FF3A0E;
+    }
+    .column h3 {
+        font-size: 0.6em;
+        font-weight: 400;
+        color: #FF3A0E;
+        cursor: pointer;
+        font-weight: bold;
+    }
 }
 
 
