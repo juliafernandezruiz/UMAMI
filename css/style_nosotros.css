@@ -106,6 +106,7 @@ header {
     font-weight: bold;
     color: var(--orange);
     font-size: 1em;
+    background-color: var(--beige);
 }
 
 .custom-line {
@@ -346,7 +347,7 @@ header {
         gap: 2rem;
     }
     .card {
-        max-width: 65%;
+        max-width: 55%;
     }
     .card img{
         width: 100%;
@@ -356,7 +357,7 @@ header {
 }
 
 /* pantalla grande */
-@media (min-width: 1440px){
+@media (min-width: 1470px){
     /* header */
     .nosotros-title{
         font-size: 4.5em;
