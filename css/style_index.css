@@ -215,44 +215,85 @@ header {
     margin: auto;
 }
 
-/* Carrusel */
-.carrusel {
+
+/* SECCIÓN FAVORITOS */
+#favoritos {
+    text-align: center;
+    margin: 2em auto;
+    background-color: var(--beige); /* Fondo beige */
+    padding: 2em;
+}
+
+.favoritos-titulo {
+    font-family: 'Paytone One', sans-serif; /* Fuente */
+    font-size: 2.5em; /* Tamaño */
+    color: #FF3A0E; /* Color rojo */
+    margin-bottom: 1em;
+}
+
+/* Contenedor de imágenes */
+.favoritos-contenedor {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    flex-wrap: wrap; /* Permite ajustar las imágenes en múltiples líneas si es necesario */
+    gap: 1em; /* Espaciado entre las imágenes */
+    justify-content: center; /* Centra el contenido */
 }
 
-/* Elementos del carrusel */
-.carrusel-item {
-    flex: 0 0 auto;
-    margin: 0 0.5em;
-    border: 2px solid #FF3A0E;
-    object-fit: cover;
+/* Imágenes */
+.favoritos-item {
+    flex: 0 1 calc(20% - 1em); /* Ajusta el tamaño de las imágenes */
+    border: 2px solid #FF3A0E; /* Borde rojo */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Animación en hover */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
-/* Flechas de navegación */
-.carrusel-flecha {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--beige);
-    border: none;
-    font-size: 2em;
-    color: #FF3A0E;
-    cursor: pointer;
-    padding: 0.2em 0.5em;
-    z-index: 10;
+/* Efecto Hover */
+.favoritos-item:hover {
+    transform: scale(1.1); /* Amplía la imagen */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
 }
 
-.carrusel-flecha.izquierda {
-    left: 0;
+/* SPONSOR */
+.sponsor-publicidad {
+    background-color: #FF3A0E; /* Franja roja */
+    overflow: hidden; /* Oculta contenido que se desborda */
+    white-space: nowrap; /* Evita saltos de línea */
+    padding: 1em 0; /* Espaciado vertical */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.carrusel-flecha.derecha {
-    right: 0;
+/* Contenedor del texto */
+.sponsor-contenedor {
+    display: flex;
+    width: 200%; /* Duplicamos el ancho para incluir los dos bloques */
+    animation: desplazamiento-infinito 20s linear infinite; /* Animación más lenta */
 }
 
-.carrusel-flecha:hover {
-    color: #1E0FDA;
+/* Texto duplicado */
+.sponsor-texto {
+    display: flex;
+    gap: 2em; /* Espaciado entre palabras */
+    flex-shrink: 0; /* Evita que los textos se redimensionen */
+}
+
+/* Estilo del texto */
+.sponsor-texto span {
+    font-family: 'Paytone One', sans-serif; /* Tipografía */
+    font-size: 2em; /* Tamaño de letra */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    color: #F8F2EF; /* Color beige */
+}
+
+/* Animación */
+@keyframes desplazamiento-infinito {
+    from {
+        transform: translateX(0); /* Posición inicial */
+    }
+    to {
+        transform: translateX(-50%); /* Mueve el contenedor una longitud equivalente a la mitad */
+    }
 }
 
 
@@ -260,7 +301,7 @@ header {
 .linea-separacion {
     height: 1px;
     background-color: #ff3a0e;
-    margin: 2em 0; 
+    margin: 0 0 2em 0;
 }
 
 /* SECCION NOSOTROS */
@@ -270,12 +311,12 @@ header {
 }
 
 /* Contenido alineado a la izquierda */
-.contenido {
-    max-width: 70%; 
-    margin-left: 3%; 
-    color: #ff3a0e; 
-    padding: 2.5em;
-}
+    .contenido {
+        max-width: 70%;
+        margin-left: 3%;
+        color: #ff3a0e;
+        padding: 5em 2.5em 4em;
+    }
 
 /* Título */
 .titulo-seccion {
@@ -334,63 +375,54 @@ header {
     border-color: #1E0FDA; 
 }
 
-/* LÍNEA ROJA */
-.linea-separacion{
-    height: 1px;
-    background-color: #ff3a0e;
-    margin: 2em 0; 
-}
-
-
-/*HORARIOS UBICACION*/
-
+/* Sección general */
 #horarios-ubicacion {
-    display: flex;
-    justify-content: center;
+    position: relative; 
+    padding: 2em 0;
 }
 
-.contenedor-seccion {
+/* Contenedor de la imagen */
+.contenedor-imagen {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Imagen PNG */
+.imagen-separadora {
+    width: 100%; 
+    display: block;
+}
+
+/* Texto sobre la imagen */
+.texto-sobre-imagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    align-items: stretch; 
     justify-content: space-between;
-    gap: 2em;
-    width: 80%;
-    max-width: 1200px;
+    align-items: center;
+    width: 100%;
+    gap: 10em;
+    padding: 2em 0em 1em 9em;
+}
+
+/* Columnas */
+.columna {
+    flex: 1; 
+    text-align: center; 
 }
 
 
-.titulo-recuadro {
+/* Texto */
+.texto {
     font-family: 'Inter', sans-serif;
     font-size: 1.2em;
-    font-weight: bold;
-    color: #ff3a0e;
-    margin-bottom: 2em;
-    margin-top: 2em;
-}
-
-.texto-recuadro {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1em;
     line-height: 1.6;
     color: #ff3a0e;
-    margin-top: 2em;
 }
 
-.linea-vertical {
-    width: 2px;
-    background-color: #ff3a0e;
-    height: 100%; 
-    margin: 0 2em;
-    align-self: stretch; 
-}
-
-
-/* LÍNEA ROJA */
-.linea-separacion {
-    height: 1px;
-    background-color: #ff3a0e;
-    margin: 2em 0; 
-}
 
 
 .contenido-seccion {
@@ -543,21 +575,822 @@ footer .privacy-policy h4 {
 }
 
 
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .text-footer {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        max-width: 90%;
+/* RESPONISVE */
+/* pantalla grande */
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+    .logo {
+        margin: 0;
+        font-size: 7rem;
+        color: #ff3a0e;
+        font-family: 'Paytone One', sans-serif;
+        text-align: center;
     }
 
-    .social-media {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+    .japanese-text {
+        position: absolute;
+        right: 30px;
+        transform: translateY(-50%);
+        font-size: 2.5rem;
+        color: #1E0FDA;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding-bottom: 3em;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+    .nav-link {
+        font-size: 2em;
+        font-weight: 400;
+        color: #ff3a0e;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+    .sakura-cuadricula {
+        display: flex
+    ;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 90em;
+    }
+    .sakura-titulo {
+        font-family: 'Paytone One', sans-serif;
+        color: #FF3A0E;
+        font-size: 5em;
+        margin-bottom: 1em;
+    }
+
+    .sakura-texto {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        color: #FF3A0E;
+        font-size: 1.5rem;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 1.5rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #ff3a0e;
+        text-decoration: none;
+        border: 1px solid #ff3a0e;
+        transition: all 0.3s ease;
+    }
+
+    .grid-item-small img {
+        width: calc(100% - 0.5rem);
+        height: 19em;
+        object-fit: cover;
+        border: 1px solid #FF3A0E;
+        box-sizing: border-box;
+        padding-bottom: 2e;
+    }
+
+    #favoritos {
+        text-align: center;
+        margin: 2em auto;
+        background-color: var(--beige);
+        padding: 2em 2em 6em 2em;
+    }
+
+    .favoritos-titulo {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 5em;
+        color: #FF3A0E;
+        margin-bottom: 1em;
+    }
+
+    .sponsor-texto {
+        display: flex;
+        gap: 5em;
+        flex-shrink: 0;
+    }
+    .sponsor-texto span {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 4em;
+        text-transform: uppercase;
+        color: #F8F2EF;
+    }
+
+    .columna p {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: left;
+        line-height: 1.2;
+        color: #ff3a0e;
+    }
+    .seccion-japon {
+        background-color: #f8f2ef;
+        padding-bottom: 4em;
+        padding-top: 4em;
+    }
+
+    .titulo-seccion {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 5em;
+        letter-spacing: -0.05em;
+        margin-bottom: 1.5em;
+        text-align: left;
+        color: #ff3a0e;
         max-width: 60%;
     }
 
-    .row-policy h3 {
-        font-size: 0.7em;
+    .boton-hover {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 2rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #FF3A0E;
+        text-decoration: none;
+        border: 1px solid #FF3A0E;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+    .titulo {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 5em;
+        margin-bottom: 1em;
+        color: #ff3a0e;
+        letter-spacing: -0.04em;
+        max-width: 72%;
+    }
+
+    .texto {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        line-height: 1.6;
+        color: #ff3a0e;
+        padding-bottom: 1em;
+        max-width: 80%;
+    }
+    .boton {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 2rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #ff3a0e;
+        text-decoration: none;
+        border: 1px solid #ff3a0e;
+        transition: all 0.3s ease;
+    }
+
+    .column h3 {
+        font-size: 2em;
+        font-weight: 400;
+        color: #FF3A0E;
+        cursor: pointer;
+        font-weight: bold;
+        padding-bottom: 2em;
+    }
+
+    .column-sm i {
+        font-size: 2.5em;
+        color: #FF3A0E;
+        transition: color 0.3s ease;
+    }
+
+    .social-media {
+        display: grid
+    ;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 3em;
+        max-width: 40%;
+        margin: 0 auto 4em auto;
+    }
+    footer .privacy-policy h3 {
+        font-size: 2em;
+        line-height: 1.2em;
+        color: #FF3A0E;
+        font-weight: bold;
+    }
+
+    footer .privacy-policy h4 {
+        font-size: 2em;
+        line-height: 1.4em;
+        color: #FF3A0E;
+    }
+
+    .footer-logo img {
+        max-width: 100%;
+        height: 30em;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7em; 
+        padding-left: 37em;
+    }
+
+}
+
+/* RESPONSIVE TABLET*/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1em;
+        padding-left: 4em;
+    }
+
+    .sakura-cuadricula {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 50em;
+    }
+
+    #sakura-roll {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .grid-item-large {
+        height: 15em;
+    }
+
+    .texto-sakura {
+        flex: 0.8;
+        margin: 3em;
+    }
+
+    .titulo-seccion {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 2em;
+        letter-spacing: -0.05em;
+        margin-bottom: 1.5em;
+        text-align: left;
+        color: #ff3a0e;
+        max-width: 100%;
+    }
+
+    .columna p {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        text-align: left;
+        line-height: 1.2;
+        color: #ff3a0e;
+    }
+
+    .boton-seccion {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2em;
+    }
+
+    .favoritos-contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+
+    .sponsor-texto {
+        display: flex;
+        gap: 3em;
+        flex-shrink: 0;
+    }
+
+    .texto-sobre-imagen {
+        gap: 3em;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5em 0em 2em 4em;
+        flex-direction: row;
+    }
+
+    .titulo {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 2em;
+        margin-bottom: 1em;
+        color: #ff3a0e;
+        letter-spacing: -0.04em;
+        max-width: 90%;
+    }
+    .texto {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        color: #ff3a0e;
+        padding-bottom: 1em;
+        max-width: 90%;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #ff3a0e;
+        text-decoration: none;
+        border: 1px solid #ff3a0e;
+        transition: all 0.3s ease;
+    }
+
+    .columna-imagen img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .contenido-seccion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2em;
+        padding: 2em 5em 4em 5em;
+    }
+
+    .boton-hover {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #FF3A0E;
+        text-decoration: none;
+        border: 1px solid #FF3A0E;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+
+}
+
+@media (max-width: 1024px)  {
+    .sakura-cuadricula {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 100%;  
+    }
+    .grid-item-small img {
+        width: calc(100% - 0.5rem);
+        height: 15em;
+        object-fit: cover;
+        border: 1px solid #FF3A0E;
+        box-sizing: border-box;
+    }
+    .nav-link {
+        font-size: 0.8em;
+        font-weight: 400;
+        color: #ff3a0e;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5em; 
+        padding-left: 7em;
+    }
+    .logo {
+        margin: 0;
+        font-size: 3rem;
+        color: #ff3a0e;
+        font-family: 'Paytone One', sans-serif;
+        text-align: center;
+    }
+    .japanese-text {
+        position: absolute;
+        right: 30px;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: #1E0FDA;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding-bottom: 2.7em;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+
+    .texto-sakura {
+        flex: 0.8;
+        margin: 4em 1em 4em 5em;
+    }
+
+    #sakura-roll {
+        display: flex
+    ;
+        align-items: flex-start;
+    }
+    .sakura-titulo {
+        font-family: 'Paytone One', sans-serif;
+        color: #FF3A0E;
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+
+    .boton {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #ff3a0e;
+        text-decoration: none;
+        border: 1px solid #ff3a0e;
+        transition: all 0.3s ease;
+    }
+
+    .favoritos-contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+    .favoritos-item {
+        flex: 0 1 calc(20% - 1em);
+        border: 2px solid #FF3A0E;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        cursor: pointer;
+        width: 0%;
+    }
+
+    .sponsor-texto {
+        display: flex;
+        gap: 3em;
+        flex-shrink: 0;
+    }
+    .sponsor-texto span {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        color: #F8F2EF;
+    }
+
+
+    .titulo-seccion {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 2.5em;
+        letter-spacing: -0.05em;
+        margin-bottom: 1.5em;
+        text-align: left;
+        color: #ff3a0e;
+        max-width: 80%;
+    }
+
+    .columna p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: left;
+        line-height: 1.2;
+        color: #ff3a0e;
+    }
+
+    .boton-hover {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #FF3A0E;
+        text-decoration: none;
+        border: 1px solid #FF3A0E;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .titulo {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        color: #ff3a0e;
+        letter-spacing: -0.04em;
+        max-width: 80%;
+    }
+
+    .texto {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        color: #ff3a0e;
+        padding-bottom: 1em;
+        max-width: 80%;
+    }
+    .sakura-texto {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        color: #FF3A0E;
+        font-size: 1rem;
+        max-width: 50%;
+        line-height: 1.2;
     }
 }
+
+
+/* RESPONSIVE MOVIL*/
+@media (max-width: 767px)  {
+
+    .logo {
+        margin: 0;
+        font-size: 2rem;
+        color: #ff3a0e;
+        font-family: 'Paytone One', sans-serif;
+        text-align: center;
+    }
+
+    .japanese-text {
+        position: absolute;
+        right: 2px;
+        transform: translateY(-50%);
+        font-size: 0.8rem;
+        color: #1E0FDA;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding-bottom: 2.7em;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+    }
+    .nav-link {
+        font-size: 0.6em;
+        font-weight: 400;
+        color: #ff3a0e;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.7em;
+        padding-left: 1em;
+    }
+
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1em;
+        padding-left: 4em;
+    }
+
+    .sakura-cuadricula {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 50em;
+    }
+
+    #sakura-roll {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .grid-item-large {
+        height: 0em;
+    }
+    .grid-item-small {
+        display: flex;
+        width: 26.9%;
+    }
+    .grid-item-small img {
+        width: calc(100% - 0.5rem);
+        height: auto;
+        object-fit: cover;
+        border: 1px solid #FF3A0E;
+        box-sizing: border-box;
+    }
+
+    .sakura-titulo {
+        font-family: 'Paytone One', sans-serif;
+        color: #FF3A0E;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    .sakura-texto {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        color: #FF3A0E;
+        font-size: 0.6rem;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.7rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #ff3a0e;
+        text-decoration: none;
+        border: 1px solid #ff3a0e;
+        transition: all 0.3s ease;
+    }
+
+    .botones-sakura {
+        margin-top: 2em;
+        display: flex;
+        justify-content: flex-start;
+        gap: 2em;
+    }
+
+    .favoritos-titulo {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 1.5em;
+        color: #FF3A0E;
+        margin-bottom: 1em;
+    }
+
+    .sponsor-texto span {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 1em;
+        text-transform: uppercase;
+        color: #F8F2EF;
+    }
+
+    .sponsor-publicidad {
+        background-color: #FF3A0E;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0.5em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .favoritos-item {
+        flex: 0 1 calc(20% - 1em);
+        border: 2px solid #FF3A0E;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        cursor: pointer;
+        width: 30%;
+    }
+
+    .texto-sakura {
+        flex: 0.8;
+        margin: 3em;
+    }
+
+    .titulo-seccion {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 1.1em;
+        letter-spacing: -0.05em;
+        margin-bottom: 1.5em;
+        text-align: left;
+        color: #ff3a0e;
+        max-width: 100%;
+    }
+
+    .texto-columnas {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        margin-bottom: 2em;
+        padding-top: 1em;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .seccion-japon {
+        background-color: #f8f2ef;
+       padding-bottom: 0em;
+    }
+    .columna p {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.6rem;
+        font-weight: 400;
+        text-align: left;
+        line-height: 1.2;
+        color: #ff3a0e;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .texto-sobre-imagen {
+        gap: 2em;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-direction: row;
+        padding: 3em 0em 1em 1.6em;
+    }
+
+    .boton-hover {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.7rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #FF3A0E;
+        text-decoration: none;
+        border: 1px solid #FF3A0E;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .texto-sobre-imagen {
+        flex-direction: row;
+        gap: 2em;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .texto-sobre-imagen {
+        gap: 2em;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-direction: row;
+        padding: 3em 1em 1em 2em;
+    }
+    .contenido-seccion {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 3em;
+        padding: 2em 2em 1em 3em;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    .titulo {
+        font-family: 'Paytone One', sans-serif;
+        font-size: 1.1em;
+        margin-bottom: 2em;
+        color: #ff3a0e;
+        letter-spacing: -0.04em;
+        max-width: 100%;
+    }
+
+    .texto {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.6rem;
+        line-height: 1.2;
+        color: #ff3a0e;
+        padding-bottom: 1em;
+        max-width: 100%;
+    }
+
+    .boton {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.7rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #ff3a0e;
+        text-decoration: none;
+        border: 1px solid #ff3a0e;
+        transition: all 0.3s ease;
+    }
+    .columna-imagen img {
+        width: 0%;
+        height: auto;
+        object-fit: cover;
+    }
+    .text-footer {
+        display: flex;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.6em;
+        margin: 0 auto 2em auto;
+        max-width: 60%;
+        justify-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .social-media {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.5em;
+        margin: 0 auto 2em auto;
+    }
+    .column-sm i {
+        font-size: 0.8em;
+        color: #FF3A0E;
+        transition: color 0.3s ease;
+    }
+
+    footer .privacy-policy h3 {
+        font-size: 0.5em;
+        line-height: 1.2em;
+        color: #FF3A0E;
+        font-weight: bold;
+    }
+    footer .privacy-policy h4 {
+        font-size: 0.5em;
+        line-height: 1.4em;
+        color: #FF3A0E;
+    }
+    .column h3 {
+        font-size: 0.6em;
+        font-weight: 400;
+        color: #FF3A0E;
+        cursor: pointer;
+        font-weight: bold;
+    }
+}
+
+
+

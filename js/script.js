@@ -94,31 +94,3 @@ $(document).ready(function () {
     }
 });
 
-/* CARRUSEL*/
-
-const carrusel = document.querySelector(".carrusel");
-const flechaIzquierda = document.getElementById("flecha-izquierda");
-const flechaDerecha = document.getElementById("flecha-derecha");
-
-let desplazamiento = 0;
-const anchoImagen = 300; // Ancho de cada imagen
-const margen = 10; // Margen entre las imágenes
-const totalImagenes = document.querySelectorAll(".carrusel-item").length; // Total de imágenes
-const carruselAncho = (totalImagenes * anchoImagen) + ((totalImagenes - 1) * margen); // Ancho total del carrusel
-
-// Mover a la derecha (mover hacia la izquierda)
-flechaIzquierda.addEventListener("click", () => {
-    if (desplazamiento < 0) {
-        desplazamiento += anchoImagen + margen; // Desplazar a la derecha
-        carrusel.style.transform = `translateX(${desplazamiento}px)`;
-    }
-});
-
-// Mover a la izquierda (mover hacia la derecha)
-flechaDerecha.addEventListener("click", () => {
-    const contenedorCarrusel = document.querySelector(".carrusel-contenedor");
-    if (desplazamiento > -(carruselAncho - contenedorCarrusel.offsetWidth)) {
-        desplazamiento -= anchoImagen + margen; // Desplazar a la izquierda
-        carrusel.style.transform = `translateX(${desplazamiento}px)`;
-    }
-});
