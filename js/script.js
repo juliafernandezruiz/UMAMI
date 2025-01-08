@@ -111,10 +111,10 @@ const swiper = new Swiper('.swiper-container', {
     },
     breakpoints: {
         640: {
-            slidesPerView: 2,
+            slidesPerView: 3, // Cambiado a 3 para dispositivos pequeños
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 3, // Opcionalmente puedes mantener 3 para tablets
         },
         1024: {
             slidesPerView: 5,
