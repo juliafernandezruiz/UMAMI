@@ -430,3 +430,71 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
+
+/* RESPONSIVE */
+/* pantalla grande */
+@media (min-width: 1440px) {
+    /* header */
+    .menu-title{
+        font-size: 4.5em;
+    }
+    .menu-subtitle{
+        font-size: 1.3em;
+        background-color: var(--beige);
+    }
+
+    /* nuestra carta */
+    .carta-titulo{
+        font-size: 3.7em;
+    }
+    .carta-texto{
+        font-size: 1.3em;
+    }
+    .carta-cuadricula{
+        height: 700px;
+    }
+    .botones-carta{
+        margin-top: 4em;
+    }
+
+    /* apartados menu */
+    #menu-cards{
+        height: 600px;
+        align-items: center;
+    }
+    .card{
+        width: 300px;
+    }
+    .card img{
+        height: 400px;
+    }
+    .card h3{
+        font-size: 1.8em;
+    }
+
+    /* platos carta */
+    .nombre{
+        font-size: 1.6em;
+    }
+    .descripcion{
+        font-size: 1.1em;
+    }
+    .entrantes-carta{
+        width: 70%;
+    }
+    .sushi-carta{
+        width: 70%;
+    }
+    .ramen-carta{
+        width: 70%;
+    }
+    .carnes-carta{
+        width: 70%;
+    }
+    .postres-carta{
+        width: 70%;
+    }
+
+
+}

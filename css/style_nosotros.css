@@ -354,4 +354,44 @@ header {
         object-fit: cover;
     }
 }
+
+/* pantalla grande */
+@media (min-width: 1440px){
+    /* header */
+    .nosotros-title{
+        font-size: 4.5em;
+    }
+    .nosotros-subtitle{
+        font-size: 1.3em;
+        background-color: var(--beige);
+    }
+
+    /* nuestra historia */
+    .historia-titulo{
+        font-size: 3.7em;
+    }
+    .historia-texto{
+        font-size: 1.3em;
+    }
+    .texto-historia{
+        margin: 0 12em 0 12em;
+    }
+
+    /* chefs */
+    .titulo{
+        font-size: 3.7em;
+    }
+    .cards-container{
+        gap: 6em;
+    }
+    .card{
+        max-width: 400px;
+    }
+    .card-nombre{
+        font-size: 1.8em;
+    }
+    .card-descripcion{
+        font-size: 1.2em;
+    }
+}
     
