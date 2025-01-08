@@ -245,3 +245,68 @@ header {
     height: 100%;
     object-fit: cover; 
 }
+
+
+
+/* RESPONSIVE */
+@media (max-width: 750px) {
+    /* nuestra historia */
+    #nuestra-historia {
+        flex-direction: column;
+        text-align: center;
+        padding: 2em 1em;
+    }
+    .texto-historia {
+        margin: 0;
+        max-width: 90%;
+    }
+    .historia-titulo {
+        font-size: 2.5em;
+    }
+    .historia-texto {
+        font-size: 1em;
+        line-height: 1.5;
+        margin: 0 2.5em 3em 2.5em;
+    }
+    .foto-historia {
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+        align-items: center; 
+    }
+    .foto-historia > img {
+        width: 90%;
+        max-width: 90%;
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    /* chefs */
+    .cards-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 2rem;
+    }
+    .card {
+        max-width: 70%;
+    }
+    .titulo{
+        font-size: 2.5em;
+    }
+    .card img {
+        width: 100%; 
+        max-width: 250px; 
+        height: auto; 
+        max-height: 400px; 
+        object-fit: cover; 
+        margin: 0 auto; 
+    }
+
+    /* carrusel */
+    /* .swiper-slide {
+        width: calc(100% / 3);
+    } */
+    
+}
+    
