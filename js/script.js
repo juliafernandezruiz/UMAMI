@@ -102,19 +102,19 @@ $(document).ready(function() {
 
 // CARRUSEL 'NOSOTROS'
 const swiper = new Swiper('.swiper-container', {
-slidesPerView: 5, 
-loop: true, 
-loopFillGroupWithBlank: true,
-autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-},
+    slidesPerView: 5,  // Muestra 5 imágenes en pantallas grandes
+    loop: true,  // Asegura que el carrusel sea infinito
+    loopFillGroupWithBlank: true,  // Llenar espacios vacíos
+    autoplay: {
+        delay: 3000,  // Desliza cada 3 segundos
+        disableOnInteraction: false,
+    },
 breakpoints: {
     640: {
-        slidesPerView: 3, // Cambiado a 3 para dispositivos pequeños
+        slidesPerView: 3, 
     },
     768: {
-        slidesPerView: 3, // Opcionalmente puedes mantener 3 para tablets
+        slidesPerView: 3, 
     },
     1024: {
         slidesPerView: 5,
@@ -130,6 +130,15 @@ links.forEach(link => {
       link.classList.add("active");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        multiplier: 1,  // Ajusta la velocidad general del scroll
+    });
+});
+
 
 
 

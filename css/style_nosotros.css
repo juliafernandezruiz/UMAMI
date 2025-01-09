@@ -352,6 +352,21 @@ footer .privacy-policy h4 {
     .titulo{
         font-size: 2.5em;
     }
+    .cards-container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .card img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+    }
+    .swiper-slide {
+        width: calc(100% / 3) !important;
+      }
 
     /* carrusel */
     /* .swiper-slide {

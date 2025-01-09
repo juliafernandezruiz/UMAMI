@@ -9,8 +9,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Inter:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Paytone+One&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/locomotive-scroll/dist/locomotive-scroll.min.css">
     <link rel="stylesheet" href="css/style_index.css">
 </head>
 <body>
@@ -83,13 +82,19 @@
     <section id="favoritos">
         <h2 class="favoritos-titulo">Nuestros favoritos</h2>
         <div class="favoritos-contenedor">
-            <img src="media/carrusel/e29a8252-bc91-45ea-b9e8-2c1f31f01ad8.png" class="favoritos-item">
-            <img src="media/carrusel/Fotografia para redes sociais _ SUSHI.png" class="favoritos-item">
-            <img src="media/carrusel/Itadakimasu.png" class="favoritos-item">
-            <img src="media/carrusel/Miyabi Sushi- Dubai.png" class="favoritos-item">
-            <img src="media/carrusel/🍣.png" class="favoritos-item">
+            <img src="media/carrusel/e29a8252-bc91-45ea-b9e8-2c1f31f01ad8.png" class="favoritos-item" 
+                 data-scroll data-scroll-speed="4" data-scroll-class="zoom-in">
+            <img src="media/carrusel/Fotografia para redes sociais _ SUSHI.png" class="favoritos-item" 
+                 data-scroll data-scroll-speed="4" data-scroll-class="zoom-in">
+            <img src="media/carrusel/Itadakimasu.png" class="favoritos-item" 
+                 data-scroll data-scroll-speed="4" data-scroll-class="zoom-in">
+            <img src="media/carrusel/Miyabi Sushi- Dubai.png" class="favoritos-item" 
+                 data-scroll data-scroll-speed="4" data-scroll-class="zoom-in">
+            <img src="media/carrusel/🍣.png" class="favoritos-item" 
+                 data-scroll data-scroll-speed="4" data-scroll-class="zoom-in">
         </div>
     </section>
+    
     
     <section class="sponsor-publicidad">
         <div class="sponsor-contenedor">
@@ -150,7 +155,7 @@
             
             <!-- Botón -->
             <div class="boton-seccion">
-                <button class="boton-hover">NOSOTROS</button>
+                <button class="boton-hover" onclick="location.href='nosotros.html';">NOSOTROS</button>
             </div>
         </div>
     </section>
@@ -209,6 +214,7 @@
         <div class="line"></div>
     
         <!-- Enlaces principales -->
+        <div class="text-footer">
         <div class="column">
             <a class="nav-link" href="index.html">Inicio</a>
         </div>
@@ -260,7 +266,11 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
