@@ -341,12 +341,14 @@ footer .privacy-policy h3 {
     font-size: 0.9em; 
     line-height: 1.2em; 
     color: #FF3A0E; 
-    font-weight: bold
+    font-weight: bold;
+    font-family: 'Inter';
 }
 footer .privacy-policy h4 {
     font-size: 0.9em; 
     line-height: 1.4em; 
     color: #FF3A0E; 
+    font-family: 'Inter';
 }
 
 .row-policy h3 {
