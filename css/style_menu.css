@@ -231,8 +231,8 @@ header {
     width: 100%;
     height: 100%;
     object-fit: fill; 
-    z-index: 0; 
-    pointer-events: none; 
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* cards */
@@ -258,12 +258,11 @@ header {
     font-weight: bold;
     font-family: 'Paytone One', sans-serif;
     color: var(--blue);
-    text-decoration: none;
 }
 
 /* hover */
 .card:hover img {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -287,7 +286,7 @@ header {
   
 .grid-row img {
     width: 50%;
-    height: 360px;
+    height: 350px;
     object-fit: cover;
     border-left: 1.5px solid var(--orange);
     border-bottom: 1.5px solid var(--orange);
@@ -304,7 +303,7 @@ header {
   
 .grid-large-row img {
     width: 100%;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
     border-left: 1.5px solid var(--orange);
     border-top: 1.5px solid var(--orange);
@@ -522,6 +521,27 @@ footer .privacy-policy h4 {
     height: auto;     
 }
 
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .text-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        max-width: 90%;
+    }
+
+    .social-media {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        max-width: 60%;
+    }
+
+    .row-policy h3 {
+        font-size: 0.7em;
+    }
+}
+
+
 /* RESPONSIVE */
 /* pantalla grande */
 @media (min-width: 1470px) {
@@ -622,7 +642,7 @@ footer .privacy-policy h4 {
         text-align: center;
     }
     .carta-titulo{
-        font-size: 2.5em;
+        font-size: 2.2em;
         margin-top: 1em;
     }
     .carta-texto{
@@ -639,7 +659,10 @@ footer .privacy-policy h4 {
     /* apartados carta */
     #menu-cards{
         gap: 1.5em;
-        padding: 2.3rem 1rem 0.3em;
+        padding: 3rem 1rem 0.3em;
+    }
+    .background-image{
+        height: auto;
     }
     .card img{
         height: 180px;
@@ -652,9 +675,20 @@ footer .privacy-policy h4 {
 
     /* platos carta */
     .carta-titulo{
-        margin: 0;
+        margin-top: 1.5em;
         margin-bottom: 0.5em;
+        font-size: 2.2em;
     }
+    .titulo-apartado-carta{
+        margin-top: 0;
+    }
+    .nombre{
+        font-size: 1.2em;
+    }
+    .descripcion{
+        font-size: 1em;
+    }
+
     .entrantes-carta{
         width: 60%;
     }
@@ -669,6 +703,12 @@ footer .privacy-policy h4 {
     }
     .postres-carta{
         width: 60%;
+    }
+    .grid-large-row img {
+        height: 290px;
+    }
+    .grid-row img {
+        height: 360px;
     }
 }
 
@@ -714,6 +754,7 @@ footer .privacy-policy h4 {
     }
     .carta-titulo{
         font-size: 2.2em;
+        margin-top: 1.5em;
     }
     .nombre{
         font-size: 1.15em;
@@ -743,5 +784,91 @@ footer .privacy-policy h4 {
     }
 }
 
+/* RESPONSIVE MENU */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        display: block;
+        padding-left: 0; 
+        text-align: center; 
+    }
 
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.5em 0; 
+    }
+}
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 767px)  {
+
+    .text-footer {
+        display: flex;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.6em;
+        margin: 0 auto 2em auto;
+        max-width: 60%;
+        justify-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .social-media {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.5em;
+        margin: 0 auto 2em auto;
+    }
+    .column-sm i {
+        font-size: 0.8em;
+        color: #FF3A0E;
+        transition: color 0.3s ease;
+    }
+
+    footer .privacy-policy h3 {
+        font-size: 0.5em;
+        line-height: 1.2em;
+        color: #FF3A0E;
+        font-weight: bold;
+    }
+    footer .privacy-policy h4 {
+        font-size: 0.5em;
+        line-height: 1.4em;
+        color: #FF3A0E;
+    }
+}
+
+/* pantalla grande */
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3em;
+    max-width: 40%;
+    margin: 0 auto 4em auto;
+}
+footer .privacy-policy h3 {
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #FF3A0E;
+    font-weight: bold;
+}
+
+footer .privacy-policy h4 {
+    font-size: 2em;
+    line-height: 1.4em;
+    color: #FF3A0E;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: 30em;
+}
+
+}
 

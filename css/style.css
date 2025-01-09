@@ -77,7 +77,7 @@ header {
 
 .nav-link.active {
     font-weight: 700; /* Bold para el enlace activo */
-    color: var(--orange) !important; 
+    color: #b0290a !important; 
 }
 
 * {

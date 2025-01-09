@@ -18,9 +18,9 @@
 /* MENÚ Y HEADER */
 /* Encabezado */
 header {
-    background-color: var(--beige);
+    background-color: #F8F2EF;
     padding: 5px 10px;
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 1px solid #ff3a0e;
 }
 
 /* Contenedor del logo */
@@ -36,7 +36,7 @@ header {
 .logo {
     margin: 0;
     font-size: 4rem; 
-    color: var(--orange);
+    color: #ff3a0e;
     font-family: 'Paytone One', sans-serif;
     text-align: center;
 }
@@ -47,7 +47,7 @@ header {
     right: 30px;
     transform: translateY(-50%);
     font-size: 1.7rem;
-    color: var(--blue);
+    color: #1E0FDA;
     writing-mode: vertical-rl;
     text-orientation: upright;
     padding-bottom: 2.7em;
@@ -57,8 +57,8 @@ header {
 
 /* menu */
 .navbar {
-    background-color: var(--beige); 
-    border-bottom: 1px solid var(--orange); 
+    background-color: #F8F2EF; 
+    border-bottom: 1px solid #ff3a0e; 
 }
 
 .navbar-nav {
@@ -72,25 +72,29 @@ header {
 .nav-link {
     font-size: 1em;
     font-weight: 400; 
-    color: var(--orange);
+    color: #ff3a0e;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: var(--orange); 
+    color: #b0290a; 
 }
 
 .nav-link.active {
     font-weight: 700;
-    color: var(--orange) !important; 
+    color: #b0290a !important; 
 }
+
 
 /* HEADER */
 #header-nosotros {
     background-color: var(--beige);
     background-image: url('../media/img/headerweb.png');
     background-size: cover;
+}
+.container {
+    padding-top: 5%;
 }
 
 .nosotros-title {
@@ -116,35 +120,35 @@ header {
 
 /* NUESTRA HISTORIA */
 #nuestra-historia{
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: space-between;
 }
 
-.texto-historia{
+.texto-historia {
     flex: 0.8;
     margin: 0 9em 0 5em;
 }
 
-.historia-titulo {
+.historia-titulo{
     font-family: 'Paytone One', sans-serif;
     color: var(--orange);
     font-size: 3em;
     margin-bottom: 1em;
 }
 
-.historia-texto {
+.historia-texto{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: var(--orange);
     font-size: 1.1em;
 }
 
-.foto-historia{
+.foto-historia {
     flex: 0.7;
 }
 
-.foto-historia img {
+.foto-historia > img {
     width: 100%;
     height: auto;
 }
@@ -159,25 +163,28 @@ header {
     width: 100%;
 }
 
+
 /* CHEFS */
-#nuestros-chefs{
+#nuestros-chefs {
     text-align: center;
+    padding: 3rem 1rem;
     background-color: var(--beige);
 }
 
 .titulo {
-    font-size: 3em;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 2rem;
     font-family: 'Paytone One', sans-serif;
-    color: var(--orange); 
+    color: var(--orange);
+    font-size: 3em;
 }
 
-.cards-container{
+.cards-container {
     display: flex;
     justify-content: center;
-    gap: 2em;
-    flex-wrap: wrap;    
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -187,26 +194,27 @@ header {
     border: none;
 }
 
-.card-img {
-    width:100%; 
+.card img {
+    width: 100%;
     height: auto;
 }
 
 .card-nombre {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin: 1em 0 0 0.5em;
+    margin: 1rem 0 0.5rem;
     font-family: 'Paytone One', sans-serif;
-    color: var(--orange); 
+    color: var(--orange);
 }
 
 .card-descripcion {
-    font-size: 1em;
-    margin: 0 1em 1em;
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    color: var(--blue); 
+    color: var(--blue);
 }
+
 
 /* CARRUSEL */
 #carrusel {
@@ -325,6 +333,7 @@ footer .privacy-policy h4 {
     height: auto;     
 }
 
+
 /* RESPONSIVE */
 /* tablet */
 @media only screen and (max-width: 820px) {
@@ -367,21 +376,11 @@ footer .privacy-policy h4 {
     .titulo{
         font-size: 2.5em;
     }
-    .cards-container {
-        display: flex;
-        flex-direction: column; 
-        align-items: center;
-        gap: 2rem;
-    }
 
-    .card img{
-        width: 100%;
-        height: 70%;
-        object-fit: cover;
-    }
-    .swiper-slide {
-        width: calc(100% / 3) !important;
-     }
+    /* carrusel */
+    /* .swiper-slide {
+        width: calc(100% / 3);
+    } */
 }
 
 
@@ -423,15 +422,6 @@ footer .privacy-policy h4 {
     }
 
     /* chefs */
-    .row.justify-content-center {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap; 
-    }
-    
-    .card {
-        margin: 0 auto;
-    }
     .titulo{
         font-size: 2.5em;
     }
@@ -441,7 +431,9 @@ footer .privacy-policy h4 {
         align-items: center;
         gap: 2rem;
     }
-
+    .card {
+        max-width: 55%;
+    }
     .card img{
         width: 100%;
         height: 70%;
@@ -450,9 +442,133 @@ footer .privacy-policy h4 {
     .swiper-slide {
         width: calc(100% / 3) !important;
       }
-    .contacto-subtitle {
-        display: none;
+}
+
+
+/* pantalla grande */
+@media (min-width: 1470px){
+    /* header */
+    .nosotros-title{
+        font-size: 4.5em;
+    }
+    .nosotros-subtitle{
+        font-size: 1.3em;
+        background-color: var(--beige);
+    }
+
+    /* nuestra historia */
+    .historia-titulo{
+        font-size: 3.7em;
+    }
+    .historia-texto{
+        font-size: 1.3em;
+    }
+    .texto-historia{
+        margin: 0 12em 0 12em;
+    }
+
+    /* chefs */
+    .titulo{
+        font-size: 3.7em;
+    }
+    .cards-container{
+        gap: 6em;
+    }
+    .card{
+        max-width: 400px;
+    }
+    .card-nombre{
+        font-size: 1.8em;
+    }
+    .card-descripcion{
+        font-size: 1.2em;
     }
 }
 
-    
+ /* RESPONSIVE MENU */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        display: block; 
+        padding-left: 0; 
+        text-align: center; 
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+
+    .nav-link {
+        padding: 0.5em 0; 
+    }
+}
+
+/* RESPONSIVE FOOTER */
+
+@media (max-width: 767px)  {
+
+    .text-footer {
+        display: flex;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.6em;
+        margin: 0 auto 2em auto;
+        max-width: 60%;
+        justify-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .social-media {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 0.5em;
+        margin: 0 auto 2em auto;
+    }
+    .column-sm i {
+        font-size: 0.8em;
+        color: #FF3A0E;
+        transition: color 0.3s ease;
+    }
+
+    footer .privacy-policy h3 {
+        font-size: 0.5em;
+        line-height: 1.2em;
+        color: #FF3A0E;
+        font-weight: bold;
+    }
+    footer .privacy-policy h4 {
+        font-size: 0.5em;
+        line-height: 1.4em;
+        color: #FF3A0E;
+    }
+}
+
+/* pantalla grande */
+@media (min-width: 1600px) and (max-width: 2560px) {
+
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3em;
+    max-width: 40%;
+    margin: 0 auto 4em auto;
+}
+footer .privacy-policy h3 {
+    font-size: 2em;
+    line-height: 1.2em;
+    color: #FF3A0E;
+    font-weight: bold;
+}
+
+footer .privacy-policy h4 {
+    font-size: 2em;
+    line-height: 1.4em;
+    color: #FF3A0E;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: 30em;
+}
+
+}   
