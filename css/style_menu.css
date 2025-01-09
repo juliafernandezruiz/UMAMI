@@ -230,9 +230,9 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: fill; /* Mantiene las proporciones del PNG */
-    z-index: 0; /* Coloca la imagen detrás del contenido de las cards */
-    pointer-events: none; /* Evita que la imagen interfiera con la interacción */
+    object-fit: fill; 
+    z-index: 0; 
+    pointer-events: none; 
 }
 
 /* cards */
@@ -241,7 +241,7 @@ header {
   text-align: center;
   background-color: transparent;
   border: none;
-  position: relative; /* Asegura que las cards estén encima del fondo */
+  position: relative;
   z-index: 1;
 }
 
@@ -258,6 +258,7 @@ header {
     font-weight: bold;
     font-family: 'Paytone One', sans-serif;
     color: var(--blue);
+    text-decoration: none;
 }
 
 /* hover */
@@ -286,7 +287,7 @@ header {
   
 .grid-row img {
     width: 50%;
-    height: 350px;
+    height: 360px;
     object-fit: cover;
     border-left: 1.5px solid var(--orange);
     border-bottom: 1.5px solid var(--orange);
@@ -303,7 +304,7 @@ header {
   
 .grid-large-row img {
     width: 100%;
-    height: 250px;
+    height: 260px;
     object-fit: cover;
     border-left: 1.5px solid var(--orange);
     border-top: 1.5px solid var(--orange);
@@ -521,28 +522,6 @@ footer .privacy-policy h4 {
     height: auto;     
 }
 
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .text-footer {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        max-width: 90%;
-    }
-
-    .social-media {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        max-width: 60%;
-    }
-
-    .row-policy h3 {
-        font-size: 0.7em;
-    }
-}
-
-
-
 /* RESPONSIVE */
 /* pantalla grande */
 @media (min-width: 1470px) {
@@ -660,10 +639,7 @@ footer .privacy-policy h4 {
     /* apartados carta */
     #menu-cards{
         gap: 1.5em;
-        padding: 3rem 1rem 0.3em;
-    }
-    .background-image{
-        height: auto;
+        padding: 2.3rem 1rem 0.3em;
     }
     .card img{
         height: 180px;
@@ -764,96 +740,6 @@ footer .privacy-policy h4 {
     .postres-carta {
         width: 100%;
         text-align: center;
-    }
-    .contacto-subtitle {
-        display: none;
-    }
-    .column-sm i {
-        font-size: 0.8em;
-        color: #FF3A0E;
-        transition: color 0.3s ease;
-    }
-    footer .privacy-policy h3 {
-        font-size: 0.5em;
-        line-height: 1.2em;
-        color: #FF3A0E;
-        font-weight: bold;
-    }
-    footer .privacy-policy h4 {
-        font-size: 0.5em;
-        line-height: 1.4em;
-        color: #FF3A0E;
-    }
-    .column h3 {
-        font-size: 0.6em;
-        font-weight: 400;
-        color: #FF3A0E;
-        cursor: pointer;
-        font-weight: bold;
-    }
-    .nav-link {
-        font-size: 0.6em;
-        font-weight: 400;
-        color: #ff3a0e;
-        text-transform: uppercase;
-        transition: color 0.3s ease;
-    }
-    .navbar-nav {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 0.7em;
-        padding-left: 1em;
-    }
-    
-    .navbar-nav {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1em;
-        padding-left: 4em;
-    }
-    .social-media {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 0.5em;
-        margin: 0 auto 2em auto;
-    }
-    .text-footer {
-        display: flex;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 0.6em;
-        margin: 0 auto 2em auto;
-        max-width: 60%;
-        justify-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .column-sm i {
-        font-size: 0.8em;
-        color: #FF3A0E;
-        transition: color 0.3s ease;
-    }
-    
-    footer .privacy-policy h3 {
-        font-size: 0.5em;
-        line-height: 1.2em;
-        color: #FF3A0E;
-        font-weight: bold;
-    }
-    footer .privacy-policy h4 {
-        font-size: 0.5em;
-        line-height: 1.4em;
-        color: #FF3A0E;
-    }
-    .column h3 {
-        font-size: 0.6em;
-        font-weight: 400;
-        color: #FF3A0E;
-        cursor: pointer;
-        font-weight: bold;
     }
 }
 
