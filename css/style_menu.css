@@ -873,4 +873,81 @@ footer .privacy-policy h4 {
 }
 
 }
+.box-container {
+    width: 50%; /* Ajusta este valor para definir el tamaño del cuadrado */
+    height: auto;
+    margin: 20px auto;
+    border: 2px solid var(--orange); /* Borde del color especificado */
+    background-color: var(--beige); /* Color de fondo del interior */
+    box-sizing: border-box;
+   
+}
+
+#personalized-card h2, #personalized-card p, #generate-card {
+    color: var(--orange); /* Color del texto */
+}
+#generate-card {
+    background-color: #1E0FDA; /* Color de fondo del botón */
+    color: #F8F2EF; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px; /* Opcional: para redondear las esquinas del botón */
+    cursor: pointer;
+}
+
+#generate-card:hover {
+    background-color: #150BB8; /* Color más oscuro para el hover */
+}
+#card-result .modal-content {
+    border: 5px solid #FF3A0E;
+    background-color: #F8F2EF;
+    border-radius: 8px;
+    color: #FF3A0E;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estiliza la cabecera del modal */
+#card-result .modal-header {
+    border-bottom: 2px solid #FF3A0E;
+}
+
+#card-result .modal-title {
+    color: #FF3A0E;
+}
+
+/* Estiliza el botón de cierre en la cabecera */
+#card-result .btn-close {
+    background: none;
+    border: none;
+    color: #FF3A0E;
+    opacity: 1;
+}
+
+#card-result .btn-close:hover {
+    color: #1E0FDA;
+}
+
+/* Estiliza el cuerpo del modal */
+#card-content {
+    background-color: #F8F2EF;
+    color: #FF3A0E;
+    padding: 15px;
+    border: 2px solid #FF3A0E;
+    border-radius: 5px;
+}
+
+/* Estiliza el botón en el pie del modal */
+#card-result .modal-footer .btn {
+    background-color: #1E0FDA;
+    color: #F8F2EF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#card-result .modal-footer .btn:hover {
+    background-color: #150BB8;
+}
 

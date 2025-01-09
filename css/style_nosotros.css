@@ -18,9 +18,9 @@
 /* MENÚ Y HEADER */
 /* Encabezado */
 header {
-    background-color: #F8F2EF;
+    background-color: var(--beige);
     padding: 5px 10px;
-    border-bottom: 1px solid #ff3a0e;
+    border-bottom: 1px solid var(--orange);
 }
 
 /* Contenedor del logo */
@@ -36,7 +36,7 @@ header {
 .logo {
     margin: 0;
     font-size: 4rem; 
-    color: #ff3a0e;
+    color: var(--orange);
     font-family: 'Paytone One', sans-serif;
     text-align: center;
 }
@@ -47,7 +47,7 @@ header {
     right: 30px;
     transform: translateY(-50%);
     font-size: 1.7rem;
-    color: #1E0FDA;
+    color: var(--blue);
     writing-mode: vertical-rl;
     text-orientation: upright;
     padding-bottom: 2.7em;
@@ -57,8 +57,8 @@ header {
 
 /* menu */
 .navbar {
-    background-color: #F8F2EF; 
-    border-bottom: 1px solid #ff3a0e; 
+    background-color: var(--beige); 
+    border-bottom: 1px solid var(--orange); 
 }
 
 .navbar-nav {
@@ -72,7 +72,7 @@ header {
 .nav-link {
     font-size: 1em;
     font-weight: 400; 
-    color: #ff3a0e;
+    color: var(--orange);
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
@@ -252,15 +252,15 @@ header {
 
 /* FOOTER */
 footer {
-    background-color: #F8F2EF;
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--beige);
+    font-family: 'Inter';
     text-align: center;
 }
 
 /* Línea horizontal azul */
 .line {
     height: 1px;
-    background-color: #1E0FDA;
+    background-color: var(--blue);
     width: 100%;
     margin-bottom: 4em;
 }
@@ -277,14 +277,14 @@ footer {
 .column h3 {
     font-size: 0.9em;
     font-weight: 400;
-    color: #FF3A0E;
+    color: var(--orange);
     cursor: pointer;
     font-weight: bold
 }
 
 .column h3.bold {
     font-weight: 700;
-    color: #1E0FDA;
+    color: var(--blue);
 }
 
 /* Redes sociales */
@@ -298,26 +298,26 @@ footer {
 }
 .column-sm i {
     font-size: 1.5em;
-    color: #FF3A0E;
+    color: var(--orange);
     transition: color 0.3s ease;
 }
 
 .column-sm i:hover {
-    color: #1E0FDA;
+    color: var(--blue);
 }
 
 /* Política de privacidad */
 footer .privacy-policy h3 {
     font-size: 0.9em; 
     line-height: 1.2em; 
-    color: #FF3A0E; 
+    color: var(--orange); 
     font-weight: bold;
     font-family: 'Inter';
 }
 footer .privacy-policy h4 {
     font-size: 0.9em; 
     line-height: 1.4em; 
-    color: #FF3A0E; 
+    color:var(--orange); 
     font-family: 'Inter';
 }
 .row-policy h3 {
@@ -527,20 +527,20 @@ footer .privacy-policy h4 {
     }
     .column-sm i {
         font-size: 0.8em;
-        color: #FF3A0E;
+        color: var(--orange);
         transition: color 0.3s ease;
     }
 
     footer .privacy-policy h3 {
         font-size: 0.5em;
         line-height: 1.2em;
-        color: #FF3A0E;
+        color:  var(--orange);
         font-weight: bold;
     }
     footer .privacy-policy h4 {
         font-size: 0.5em;
         line-height: 1.4em;
-        color: #FF3A0E;
+        color:  var(--orange);
     }
 }
 
@@ -557,14 +557,14 @@ footer .privacy-policy h4 {
 footer .privacy-policy h3 {
     font-size: 2em;
     line-height: 1.2em;
-    color: #FF3A0E;
+    color:  var(--orange);
     font-weight: bold;
 }
 
 footer .privacy-policy h4 {
     font-size: 2em;
     line-height: 1.4em;
-    color: #FF3A0E;
+    color:  var(--orange);
 }
 
 .footer-logo img {

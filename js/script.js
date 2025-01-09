@@ -1,6 +1,5 @@
-
+AOS.init();
 $(document).ready(function () {
-    console.log("Script cargado correctamente");
 
     const foodSuggestions = ["Ramen", "Sushi", "Okonomiyaki", "Takoyaki", "Sashimi", "Tempura"];
 
@@ -131,13 +130,8 @@ links.forEach(link => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]'),
-        smooth: true,
-        multiplier: 1,  // Ajusta la velocidad general del scroll
-    });
-});
+
+
 
 
 
