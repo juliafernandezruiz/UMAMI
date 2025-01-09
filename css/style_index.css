@@ -593,34 +593,6 @@ footer .privacy-policy h4 {
 /* pantalla grande */
 @media (min-width: 1600px) and (max-width: 2560px) {
 
-    .logo {
-        margin: 0;
-        font-size: 7rem;
-        color: #ff3a0e;
-        font-family: 'Paytone One', sans-serif;
-        text-align: center;
-    }
-
-    .japanese-text {
-        position: absolute;
-        right: 30px;
-        transform: translateY(-50%);
-        font-size: 2.5rem;
-        color: var(--blue);
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        padding-bottom: 3em;
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-    }
-    .nav-link {
-        font-size: 2em;
-        font-weight: 400;
-        color: #ff3a0e;
-        text-transform: uppercase;
-        transition: color 0.3s ease;
-    }
-
     .sakura-cuadricula {
         display: flex
     ;
@@ -970,25 +942,7 @@ footer .privacy-policy h4 {
         gap: 5em; 
         padding-left: 7em;
     }
-    .logo {
-        margin: 0;
-        font-size: 3rem;
-        color: #ff3a0e;
-        font-family: 'Paytone One', sans-serif;
-        text-align: center;
-    }
-    .japanese-text {
-        position: absolute;
-        right: 30px;
-        transform: translateY(-50%);
-        font-size: 1.2rem;
-        color: #1E0FDA;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        padding-bottom: 2.7em;
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-    }
+    
 
     .texto-sakura {
         flex: 0.8;
@@ -1109,26 +1063,7 @@ footer .privacy-policy h4 {
 /* RESPONSIVE MOVIL*/
 @media (max-width: 767px)  {
 
-    .logo {
-        margin: 0;
-        font-size: 2rem;
-        color: #ff3a0e;
-        font-family: 'Paytone One', sans-serif;
-        text-align: center;
-    }
 
-    .japanese-text {
-        position: absolute;
-        right: 2px;
-        transform: translateY(-50%);
-        font-size: 0.8rem;
-        color: #1E0FDA;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        padding-bottom: 2.7em;
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-    }
 
     .sakura-cuadricula {
         display: flex;

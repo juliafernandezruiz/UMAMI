@@ -573,24 +573,3 @@ footer .privacy-policy h4 {
 }
 
 }   
-@media (max-width: 767px) {
-    .logo {
-        margin: 0;
-        font-size: 2rem;
-        color: #ff3a0e;
-        font-family: 'Paytone One', sans-serif;
-        text-align: center;
-    }
-    .japanese-text {
-        position: absolute;
-        right: 2px;
-        transform: translateY(-50%);
-        font-size: 0.8rem;
-        color: #1E0FDA;
-        writing-mode: vertical-rl;
-        text-orientation: upright;
-        padding-bottom: 2.7em;
-        font-family: 'Inter', sans-serif;
-        font-weight: 700;
-    }
-}
