@@ -928,7 +928,6 @@ footer .privacy-policy h4 {
         box-sizing: border-box;
     }
     .nav-link {
-        font-size: 0.8em;
         font-weight: 400;
         color: #ff3a0e;
         text-transform: uppercase;
@@ -1316,6 +1315,9 @@ footer .privacy-policy h4 {
         cursor: pointer;
         font-weight: bold;
     }
+    model-viewer{
+        width: 200px !important;
+        height: 200px !important;}
 }
 
 /* RESPONSIVE MENU */
@@ -1410,6 +1412,7 @@ footer .privacy-policy h4 {
     model-viewer{
         border: 2px var(--orange) solid;
         width: 50%;
+        height: 300px;
     }
     
     
